@@ -1,0 +1,53 @@
+.header {
+  position: relative;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.shape {
+  position: relative;
+}
+
+.custom-shape-divider-top-1632345337 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1632345337 svg {
+    position: relative;
+    display: block;
+    width: calc(158% + 1.3px);
+    height: 279px;
+    transform: rotateY(180deg);
+
+}
+
+h1 {
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  color: #012D5B;
+  margin-left: 10px;
+
+}
+
+.career-title {
+  margin-top: 18vh;
+  margin-bottom: 0;
+  font-size: 8vh;
+}
+
+.government-title {
+  font-size: 4vh;
+  margin-top: 1vh;
+  margin-bottom: 0;
+}
+
+.custom-shape-divider-top-1632345337 .shape-fill {
+    fill: #EDDE18;
+}
