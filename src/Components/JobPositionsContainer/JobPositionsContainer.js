@@ -1,7 +1,7 @@
 import './JobPositionsContainer.css'
 import PositionCard from '../PositionCard/PositionCard'
 
-const JobPositionsContainer = ({ postedPositions }) => {
+const JobPositionsContainer = ({ postedPositions, searchParameters }) => {
 if (postedPositions) {
   const positionCards = postedPositions.SearchResult.SearchResultItems.map(position => {
     return (
@@ -18,7 +18,12 @@ if (postedPositions) {
   })
 
   return (
- [positionCards]
+    <>
+      <h2 className="search-results-title">Search Results for: "{[searchParameters]}"</h2>
+      <div className="job-container">
+        {[positionCards]}
+      </div>
+    </>
   )
 } else {
   return (

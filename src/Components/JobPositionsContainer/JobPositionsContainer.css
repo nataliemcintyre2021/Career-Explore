@@ -1,0 +1,15 @@
+.job-container {
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+  background-color: #190284;
+  margin: 0;
+}
+
+.search-results-title {
+  background-color: #190284;
+  color: white;
+  margin: 0;
+  padding-bottom: 2em;
+}

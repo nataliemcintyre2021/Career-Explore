@@ -7,9 +7,10 @@ import JobPositionsContainer from '../JobPositionsContainer/JobPositionsContaine
 
 const App = () => {
 const [postedPositions, setPostedPositions] = useState()
+const [searchParameters, setSearchParameters] = useState()
 
 const fetchPositions = (position) => {
-
+  setSearchParameters(position)
   const url = `https://data.usajobs.gov/api/Search?PositionTitle=${position}`;
   var host = 'data.usajobs.gov';
   var userAgent = 'nataliemcintyre2021@gmail.com';
@@ -35,7 +36,7 @@ const fetchPositions = (position) => {
       <Header />
 
       <SearchForm fetchPositions={fetchPositions}/>
-      <JobPositionsContainer postedPositions={postedPositions}/>
+      <JobPositionsContainer postedPositions={postedPositions} searchParameters={searchParameters}/>
 
       <Footer />
     </>
