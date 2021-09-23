@@ -12,6 +12,7 @@ if (postedPositions) {
         deptName={position.MatchedObjectDescriptor.DepartmentName}
         orgName={position.MatchedObjectDescriptor.OrganizationName}
         duties={position.MatchedObjectDescriptor.UserArea.Details.MajorDuties}
+        appUrl={position.MatchedObjectDescriptor.ApplyURI[0]}
 
       />
     )
