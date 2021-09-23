@@ -6,7 +6,7 @@ import SearchForm from '../SearchForm/SearchForm'
 import JobPositionsContainer from '../JobPositionsContainer/JobPositionsContainer'
 
 const App = () => {
-const [postedPositions, setPostedPositions] = useState({})
+const [postedPositions, setPostedPositions] = useState()
 
 const fetchPositions = (position) => {
 

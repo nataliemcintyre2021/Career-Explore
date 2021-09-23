@@ -1,8 +1,9 @@
 import './JobPositionsContainer.css'
+import PositionCard from '../PositionCard/PositionCard'
 
 const JobPositionsContainer = ({ postedPositions }) => {
-  const jobItems = postedPositions.SearchResult.SearchResultItems
-  const positionCards = jobItems.map(position => {
+if (postedPositions) {
+  const positionCards = postedPositions.SearchResult.SearchResultItems.map(position => {
     return (
       <PositionCard
         id={position.MatchedObjectId}
@@ -10,13 +11,19 @@ const JobPositionsContainer = ({ postedPositions }) => {
         positionTitle={position.PositionTitle}
         deptName={position.DepartmentName}
         orgName={position.OrganizationName}
-        jobDuties={position.UserArea.Details.MajorDuties}
+
       />
     )
   })
+
   return (
-null
+ {positionCards}
   )
+} else {
+  return (
+    null
+  )
+}
 }
 
 
