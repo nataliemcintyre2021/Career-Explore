@@ -3,7 +3,9 @@ import "./Home.css"
 const Home = () => {
   return (
     <main className="main-page">
-      <p>HOME</p>
+      <section className="prompts">
+        <p>Do you have interest in a US government role?</p>
+      </section>
     </main>
   )
 }
