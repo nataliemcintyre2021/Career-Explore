@@ -1,7 +1,8 @@
 .main-page {
-  height: 120vh;
+  height: 100vh;
   width: 150vw;
   background-color: #190183;
+  overflow-x: hidden;
 
 }
 

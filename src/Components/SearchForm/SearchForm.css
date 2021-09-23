@@ -1,0 +1,12 @@
+form {
+  border: 5px solid red;
+  background-color: #190183;
+  height: 10vh;
+  width: 100vw;
+  padding-bottom: 40vh;
+}
+
+
+input {
+  margin: 10px;
+}
