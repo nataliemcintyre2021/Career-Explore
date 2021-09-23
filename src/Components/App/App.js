@@ -1,11 +1,15 @@
 import './App.css';
+import { useState } from 'react';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import SearchForm from '../SearchForm/SearchForm'
+import JobPositionsContainer from '../JobPositionsContainer/JobPositionsContainer'
 
 const App = () => {
+const [postedPositions, setPostedPositions] = useState({})
 
 const fetchPositions = (position) => {
+
   const url = `https://data.usajobs.gov/api/Search?PositionTitle=${position}`;
   var host = 'data.usajobs.gov';
   var userAgent = 'nataliemcintyre2021@gmail.com';
@@ -20,7 +24,7 @@ const fetchPositions = (position) => {
     }
   })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => setPostedPositions(data))
     .catch(error => console.log(error))
 }
 
@@ -31,6 +35,7 @@ const fetchPositions = (position) => {
       <Header />
 
       <SearchForm fetchPositions={fetchPositions}/>
+      <JobPositionsContainer postedPositions={postedPositions}/>
 
       <Footer />
     </>
