@@ -8,16 +8,17 @@ if (postedPositions) {
       <PositionCard
         id={position.MatchedObjectId}
         key={position.MatchedObjectId}
-        positionTitle={position.PositionTitle}
-        deptName={position.DepartmentName}
-        orgName={position.OrganizationName}
+        positionTitle={position.MatchedObjectDescriptor.PositionTitle}
+        deptName={position.MatchedObjectDescriptor.DepartmentName}
+        orgName={position.MatchedObjectDescriptor.OrganizationName}
+        duties={position.MatchedObjectDescriptor.UserArea.Details.MajorDuties}
 
       />
     )
   })
 
   return (
- {positionCards}
+ [positionCards]
   )
 } else {
   return (
