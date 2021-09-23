@@ -22,6 +22,7 @@
   padding: 5%;
   height: 25vh;
   width: 20vw;
+  font-family: 'Roboto', sans-serif;
 }
 
 .card:hover .show-me {
