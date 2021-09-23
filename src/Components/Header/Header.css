@@ -33,7 +33,22 @@ h1 {
   position: absolute;
   color: #012D5B;
   margin-left: 10px;
+}
 
+.menu {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.favorites-page,
+.resources-page {
+  text-decoration: none;
+  cursor: pointer;
+  color: #012D5B;
+  margin: 13px;
 }
 
 .career-title {

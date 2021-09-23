@@ -10,6 +10,16 @@ const Header = () => {
           </svg>
         </div>
       </div>
+      <section className="menu">
+        <a
+          href=''
+          className='favorites-page'
+          >Favorites</a>
+        <a
+          href=''
+          className='resources-page'
+          >Job Resources</a>
+      </section>
       <section className="title">
         <h1 className="career-title">Career Explore</h1>
         <h2 className="government-title">Government Jobs</h2>
