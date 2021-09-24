@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import SearchForm from '../SearchForm/SearchForm'
 import JobPositionsContainer from '../JobPositionsContainer/JobPositionsContainer'
+import { Route } from 'react-router-dom';
 
 const App = () => {
 const [postedPositions, setPostedPositions] = useState()
@@ -35,8 +36,13 @@ const fetchPositions = (position) => {
     <>
       <Header />
 
-      <SearchForm fetchPositions={fetchPositions}/>
-      <JobPositionsContainer postedPositions={postedPositions} searchParameters={searchParameters}/>
+      <Route path="/" render={() => {
+        return (
+        <>
+        <SearchForm fetchPositions={fetchPositions}/>
+        <JobPositionsContainer postedPositions={postedPositions} searchParameters={searchParameters}/>
+        </>
+      )}} />
 
       <Footer />
     </>
