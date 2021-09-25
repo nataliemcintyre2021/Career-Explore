@@ -2,28 +2,28 @@ import './PositionDetails.css'
 import { useEffect, useState } from 'react';
 
 
-const PositionDetails = ({ fetchPositions, postedPositions, currentPosition, searchParameters }) => {
+const PositionDetails = ({ fetchPositions, postedPositions, currentPosition, searchParameters, loading, setLoading }) => {
 
 const [selectPosition, setSelectPosition] = useState()
-const [loading, setLoading] = useState()
+
 
 useEffect(() => {
-  setLoading(true)
+
   console.log("HERE")
   console.log("window pathname>>>", window.location.pathname)
   let searchParams = window.location.pathname.split("/").splice(1)[0].replace('%20', " ")
   console.log("Search Params>>>", searchParams)
 
   fetchPositions(searchParams)
-  if (postedPositions) {
-    setPositionDetails()
-    setLoading(false)
-  }
-
-
 
 }, [])
 
+useEffect(() => {
+  if (postedPositions) {
+      setPositionDetails()
+  }
+
+}, [loading])
 
 
 const setPositionDetails = () => {
@@ -31,16 +31,32 @@ const setPositionDetails = () => {
 
   let thePosition = postedPositions.SearchResult.SearchResultItems.find(position => position.MatchedObjectId === urlId)
 
-  setSelectPosition(thePosition)
+  if (postedPositions) {
+    setSelectPosition(thePosition)
+  }
+
+
+
+}
+
+
+
+const getMajorDuties = () => {
+  let theDuties = ''
+  selectPosition.MatchedObjectDescriptor.UserArea.Details.MajorDuties.forEach(duty => {
+    theDuties += duty;
+  })
+  return theDuties
 }
 
   return (
     <>
-    { !loading ?
+    { selectPosition &&
       <section>
-     {`${selectPosition.MatchedObjectDescriptor.UserArea.Details.MajorDuties[0]}`}
+      <h1>{ selectPosition.MatchedObjectDescriptor.PositionTitle }</h1>
+      <p>{ getMajorDuties() } </p>
       </section>
-      : null}
+    }
   </>
   )
 }

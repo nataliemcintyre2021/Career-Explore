@@ -10,11 +10,13 @@ import { Route } from 'react-router-dom';
 const App = () => {
 const [postedPositions, setPostedPositions] = useState()
 const [searchParameters, setSearchParameters] = useState()
+const [loading, setLoading] = useState(true)
 
 
 
 
 const fetchPositions = (position) => {
+
   setSearchParameters(position)
   const url = `https://data.usajobs.gov/api/Search?PositionTitle=${position}`;
   var host = 'data.usajobs.gov';
@@ -33,8 +35,10 @@ const fetchPositions = (position) => {
     .then(data => {
       console.log(data)
       setPostedPositions(data)
+      setLoading(false)
     })
-    .catch(error => console.log(error))
+
+    .catch(error => console.log("ERROR!", error))
 
 }
 
@@ -58,7 +62,11 @@ const fetchPositions = (position) => {
         return (
           <PositionDetails
           fetchPositions= {fetchPositions} postedPositions={postedPositions}
-          searchParameters={searchParameters}/>
+          searchParameters={searchParameters}
+          loading={loading}
+          setLoading={setLoading}
+          />
+
       )}} />
 
       <Footer />
