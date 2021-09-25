@@ -8,6 +8,7 @@ import PositionDetails from '../PositionDetails/PositionDetails'
 import Favorites from '../Favorites/Favorites'
 import { Route } from 'react-router-dom';
 
+const dotenv = require('dotenv').config()
 const App = () => {
 const [postedPositions, setPostedPositions] = useState()
 const [searchParameters, setSearchParameters] = useState()
@@ -15,7 +16,7 @@ const [loading, setLoading] = useState(true)
 const [favorites, setFavorites] = useState([])
 
 
-
+const api_key = process.env.REACT_APP_API_KEY
 
 const fetchPositions = (position) => {
 
@@ -23,7 +24,7 @@ const fetchPositions = (position) => {
   const url = `https://data.usajobs.gov/api/Search?PositionTitle=${position}`;
   var host = 'data.usajobs.gov';
   var userAgent = 'nataliemcintyre2021@gmail.com';
-  var authKey = '/OzvruqvX5Jcf9J84/TH1epCY/n9yJu6q1PIOGw4AMI=';
+  var authKey = api_key;
 
   fetch(url, {
     method: 'GET',
@@ -53,10 +54,8 @@ const addFavorite = (position) => {
 
 
   return (
-
     <>
       <Header />
-
       <Route exact path="/" render={() => {
         return (
         <>
@@ -72,7 +71,6 @@ const addFavorite = (position) => {
       }} />
 
       <Route exact path="/:searchParameters/:id" render={({ match }) => {
-
         return (
           <PositionDetails
           fetchPositions= {fetchPositions} postedPositions={postedPositions}
@@ -81,9 +79,7 @@ const addFavorite = (position) => {
           setLoading={setLoading}
           addFavorite={addFavorite}
           />
-
       )}} />
-
       <Footer />
     </>
   );
