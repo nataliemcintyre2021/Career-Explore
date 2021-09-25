@@ -11,6 +11,7 @@ const App = () => {
 const [postedPositions, setPostedPositions] = useState()
 const [searchParameters, setSearchParameters] = useState()
 const [loading, setLoading] = useState(true)
+const [favorites, setFavorites] = useState([])
 
 
 
@@ -42,6 +43,12 @@ const fetchPositions = (position) => {
 
 }
 
+const addFavorite = (position) => {
+  if (!favorites.includes(position)) {
+      setFavorites([...favorites, position])
+  }
+}
+
 
 
   return (
@@ -65,6 +72,7 @@ const fetchPositions = (position) => {
           searchParameters={searchParameters}
           loading={loading}
           setLoading={setLoading}
+          addFavorite={addFavorite}
           />
 
       )}} />

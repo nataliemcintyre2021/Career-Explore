@@ -2,7 +2,7 @@ import './PositionDetails.css'
 import { useEffect, useState } from 'react';
 
 
-const PositionDetails = ({ fetchPositions, postedPositions, currentPosition, searchParameters, loading, setLoading }) => {
+const PositionDetails = ({ fetchPositions, postedPositions, currentPosition, searchParameters, loading, setLoading, addFavorite }) => {
 
 const [selectPosition, setSelectPosition] = useState()
 
@@ -59,7 +59,7 @@ const getMajorDuties = () => {
     { selectPosition &&
       <section className="details">
         <div className="details-card">
-        <div className="favorite"><button class="favorite-button">♥ Favorite</button></div>
+        <div className="favorite"><button class="favorite-button" onClick={() => addFavorite(selectPosition)}>♥ Favorite</button></div>
           <h1 className="heading-details">{ selectPosition.MatchedObjectDescriptor.PositionTitle }</h1>
           <h2 className="heading-org-details">{ selectPosition.MatchedObjectDescriptor.OrganizationName }</h2>
           <h2 className="heading-dept-details">{ selectPosition.MatchedObjectDescriptor.DepartmentName }</h2>
