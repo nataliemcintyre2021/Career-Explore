@@ -52,9 +52,12 @@ const getMajorDuties = () => {
   return (
     <>
     { selectPosition &&
-      <section>
-      <h1>{ selectPosition.MatchedObjectDescriptor.PositionTitle }</h1>
-      <p>{ getMajorDuties() } </p>
+      <section className="details">
+        <h1 className="heading-details">{ selectPosition.MatchedObjectDescriptor.PositionTitle }</h1>
+        <h2 className="heading-org-details">{ selectPosition.MatchedObjectDescriptor.OrganizationName }</h2>
+        <h2 className="heading-dept-details">{ selectPosition.MatchedObjectDescriptor.DepartmentName }</h2>
+        <p className="role-question">What would you do in this role?</p>
+        <p className="duties-details">{ getMajorDuties() } </p>
       </section>
     }
   </>
