@@ -1,0 +1,92 @@
+.details {
+  height: 100%;
+
+  background-color: #190183;
+  margin: 0;
+  padding-top: 0;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.details-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 0;
+  margin: 40vh;
+  height: 80%;
+  width: 90%;
+}
+
+.heading-details {
+  padding-top: 80px;
+  padding-bottom: 0;
+  font-size: 35px;
+  color: #190183;
+  text-align: center;
+}
+
+.heading-org-details,
+.heading-dept-details {
+  color: #190183;
+  text-align: center;
+  margin: 0;
+}
+
+.duties-details {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  color: #190183;
+  font-family: 'Roboto', sans-serif;
+
+  font-size: 25px;
+
+
+}
+
+.role-question {
+  color: #190183;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  padding-top: 30px;
+  margin: 0;
+  font-size: 50px;
+}
+
+.app-link {
+  margin: 30vh;
+  padding: 20vw;
+  font-weight: bold;
+}
+
+.favorite {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.favorite-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin: 2em;
+  border-radius: 5%;
+  height: 25px;;
+  width: 125px;
+  background-color: #190183;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 2px;
+  cursor: pointer;
+}

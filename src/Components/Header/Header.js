@@ -1,4 +1,5 @@
 import "./Header.css"
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -11,19 +12,25 @@ const Header = () => {
         </div>
       </div>
       <section className="menu">
+      <Link to={`/favorites`}>
         <a
           href=''
           className='favorites-page'
           >Favorites</a>
+      </Link>
+      <Link to={`/job-resources`}>
         <a
           href=''
           className='resources-page'
           >Job Resources</a>
+      </Link>
       </section>
-      <section className="title">
-        <h1 className="career-title">Career Explore</h1>
-        <h2 className="government-title">Government Jobs</h2>
-      </section>
+      <Link to={"/"}>
+        <section className="title">
+          <h1 className="career-title">Career Explore</h1>
+          <h2 className="government-title">Government Jobs</h2>
+        </section>
+      </ Link>
 
     </header>
   )

@@ -1,0 +1,41 @@
+/*.card {
+  box-sizing: border-box;
+  border: 3px solid #190284;
+  padding: 20px;
+  background-color: white;
+  color: #190284;
+  height: 10vh;
+  width: 12vw;
+}*/
+
+.show-me {
+  display: none;
+}
+
+.card {
+  text-align: center;
+  margin: 0;
+  border-radius: 2%;
+  
+  background-color: white;
+  color: #190284;
+  padding: 5%;
+  height: 25vh;
+  width: 20vw;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card:hover .show-me {
+  display: block;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  -webkit-box-shadow: 0px 0px 10px 0px #FFF;
+  -moz-box-shadow: 0px 0px 10px 0px #FFF;
+  box-shadow: 0px 0px 10px 0px #FFF;
+}
+
+
+/*  background-color: #67BCDE;*/
