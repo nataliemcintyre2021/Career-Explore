@@ -5,6 +5,7 @@ import Footer from '../Footer/Footer';
 import SearchForm from '../SearchForm/SearchForm'
 import JobPositionsContainer from '../JobPositionsContainer/JobPositionsContainer'
 import PositionDetails from '../PositionDetails/PositionDetails'
+import Favorites from '../Favorites/Favorites'
 import { Route } from 'react-router-dom';
 
 const App = () => {
@@ -63,6 +64,12 @@ const addFavorite = (position) => {
         <JobPositionsContainer postedPositions={postedPositions} searchParameters={searchParameters}/>
         </>
       )}} />
+
+      <Route exact path="/favorites" render={() => {
+        return (
+          <Favorites />
+        )
+      }} />
 
       <Route exact path="/:searchParameters/:id" render={({ match }) => {
 
