@@ -6,7 +6,7 @@ const JobPositionsContainer = ({ postedPositions, searchParameters }) => {
 if (postedPositions) {
   const positionCards = postedPositions.SearchResult.SearchResultItems.map(position => {
     return (
-      <NavLink className="card-link" to={`/${position.MatchedObjectDescriptor.PositionTitle}${position.MatchedObjectDescriptor.OrganizationName}${position.MatchedObjectDescriptor.DepartmentName}`}>
+      <NavLink className="card-link" to={`/${searchParameters}/${position.MatchedObjectId}`}>
         <PositionCard
           id={position.MatchedObjectId}
           key={position.MatchedObjectId}
