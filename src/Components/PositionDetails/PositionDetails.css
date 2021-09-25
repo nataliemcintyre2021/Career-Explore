@@ -67,3 +67,26 @@
   padding: 20vw;
   font-weight: bold;
 }
+
+.favorite {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.favorite-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  margin: 2em;
+  border-radius: 5%;
+  height: 25px;;
+  width: 125px;
+  background-color: #190183;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 2px;
+  cursor: pointer;
+}
