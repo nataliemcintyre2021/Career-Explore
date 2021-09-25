@@ -67,7 +67,7 @@ const addFavorite = (position) => {
 
       <Route exact path="/favorites" render={() => {
         return (
-          <Favorites />
+          <Favorites favorites={favorites}/>
         )
       }} />
 

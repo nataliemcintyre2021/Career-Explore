@@ -1,0 +1,7 @@
+.favorite-container {
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  background-color: #190284;
+  margin: 0;
+}
