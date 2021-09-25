@@ -8,7 +8,7 @@ const PositionCard = ({ id, key, positionTitle, deptName, orgName, jobDuties, du
      <h3>{deptName}</h3>
      <p>{positionTitle}</p>
 
-     <a href={appUrl ? appUrl : null}>Apply Here!</a>
+
     </div>
   )
 }

@@ -43,21 +43,29 @@ const setPositionDetails = () => {
 
 const getMajorDuties = () => {
   let theDuties = ''
-  selectPosition.MatchedObjectDescriptor.UserArea.Details.MajorDuties.forEach(duty => {
-    theDuties += duty;
+  selectPosition.MatchedObjectDescriptor.UserArea.Details.MajorDuties.forEach((duty, index) => {
+    if (index != selectPosition.MatchedObjectDescriptor.UserArea.Details.MajorDuties.length - 1) {
+        theDuties += `${duty}  `;
+    } else {
+        theDuties += duty;
+    }
   })
-  return theDuties
+  theDuties.split()
+  return theDuties;
 }
 
   return (
     <>
     { selectPosition &&
       <section className="details">
-        <h1 className="heading-details">{ selectPosition.MatchedObjectDescriptor.PositionTitle }</h1>
-        <h2 className="heading-org-details">{ selectPosition.MatchedObjectDescriptor.OrganizationName }</h2>
-        <h2 className="heading-dept-details">{ selectPosition.MatchedObjectDescriptor.DepartmentName }</h2>
-        <p className="role-question">What would you do in this role?</p>
-        <p className="duties-details">{ getMajorDuties() } </p>
+        <div className="details-card">
+          <h1 className="heading-details">{ selectPosition.MatchedObjectDescriptor.PositionTitle }</h1>
+          <h2 className="heading-org-details">{ selectPosition.MatchedObjectDescriptor.OrganizationName }</h2>
+          <h2 className="heading-dept-details">{ selectPosition.MatchedObjectDescriptor.DepartmentName }</h2>
+          <p className="role-question">What would you do in this role?</p>
+          <p className="duties-details">{ getMajorDuties() } </p>
+          <a className="app-link" href={selectPosition.MatchedObjectDescriptor.PositionURI ? selectPosition.MatchedObjectDescriptor.PositionURI : null}>Learn more about applying here!</a>
+        </div>
       </section>
     }
   </>
