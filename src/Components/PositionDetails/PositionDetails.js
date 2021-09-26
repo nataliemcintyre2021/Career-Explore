@@ -1,5 +1,6 @@
 import './PositionDetails.css'
 import { useEffect, useState } from 'react';
+import Loader from '../Loader/Loader'
 
 
 const PositionDetails = ({ fetchPositions, postedPositions, currentPosition, searchParameters, loading, setLoading, addFavorite, id }) => {
@@ -43,7 +44,7 @@ const getMajorDuties = () => {
 
   return (
     <>
-    { selectPosition &&
+    { selectPosition ?
       <section className="details">
         <div className="details-card">
         <div className="favorite"><button class="favorite-button" onClick={() => addFavorite(selectPosition)}>♥ Favorite</button></div>
@@ -55,11 +56,11 @@ const getMajorDuties = () => {
           <a className="app-link" href={selectPosition.MatchedObjectDescriptor.PositionURI ? selectPosition.MatchedObjectDescriptor.PositionURI : null}>Learn more about applying here!</a>
         </div>
 
-      </section>
-    }
-  </>
-  )
+      </section> :
+        <Loader />
 }
-
+  </>
+)
+}
 
 export default PositionDetails

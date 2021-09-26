@@ -13,13 +13,13 @@ const dotenv = require('dotenv').config()
 const App = () => {
 const [postedPositions, setPostedPositions] = useState()
 const [searchParameters, setSearchParameters] = useState()
-const [loading, setLoading] = useState(true)
+const [loading, setLoading] = useState()
 const [favorites, setFavorites] = useState([])
 const [error, setError] = useState('')
 
 
 const fetchPositions = (position) => {
-
+setLoading(true)
   setSearchParameters(position)
   getPositions(position)
     .then(data => {
@@ -48,7 +48,7 @@ const addFavorite = (position) => {
         return (
         <>
         <SearchForm fetchPositions={fetchPositions}/>
-        <JobPositionsContainer postedPositions={postedPositions} searchParameters={searchParameters}/>
+        <JobPositionsContainer postedPositions={postedPositions} searchParameters={searchParameters} loading={loading}/>
         </>
       )}} />
 
