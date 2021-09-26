@@ -2,14 +2,13 @@ import './PositionDetails.css'
 import { useEffect, useState } from 'react';
 
 
-const PositionDetails = ({ fetchPositions, postedPositions, currentPosition, searchParameters, loading, setLoading, addFavorite }) => {
+const PositionDetails = ({ fetchPositions, postedPositions, currentPosition, searchParameters, loading, setLoading, addFavorite, id }) => {
 
 const [selectPosition, setSelectPosition] = useState()
 
 
 useEffect(() => {
-  let searchParams = decodeURI(window.location.pathname.split("/").splice(1)[0])
-  fetchPositions(searchParams)
+  fetchPositions(searchParameters)
 }, [])
 
 useEffect(() => {
@@ -20,9 +19,7 @@ useEffect(() => {
 
 
 const setPositionDetails = () => {
-  let urlId = window.location.pathname.split("/").slice(2).join();
-
-  let thePosition = postedPositions.SearchResult.SearchResultItems.find(position => position.MatchedObjectId === urlId)
+  let thePosition = postedPositions.SearchResult.SearchResultItems.find(position => position.MatchedObjectId === id)
 
   if (postedPositions) {
     setSelectPosition(thePosition)

@@ -1,9 +1,13 @@
 .favorite-container {
-  padding: 1em;
+
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   background-color: #190284;
   margin: 0;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .delete-btn {
@@ -17,4 +21,15 @@
   color: #005470;
   font-size: 2.5em;
   padding-left: 5px;
+}
+
+
+.fav-heading {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+  margin: 0;
 }

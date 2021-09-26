@@ -7,6 +7,7 @@ import JobPositionsContainer from '../JobPositionsContainer/JobPositionsContaine
 import PositionDetails from '../PositionDetails/PositionDetails'
 import Favorites from '../Favorites/Favorites'
 import { Route } from 'react-router-dom';
+import { getPositions } from '../../apiCalls'
 
 const dotenv = require('dotenv').config()
 const App = () => {
@@ -14,34 +15,19 @@ const [postedPositions, setPostedPositions] = useState()
 const [searchParameters, setSearchParameters] = useState()
 const [loading, setLoading] = useState(true)
 const [favorites, setFavorites] = useState([])
+const [error, setError] = useState('')
 
-
-const api_key = process.env.REACT_APP_API_KEY
 
 const fetchPositions = (position) => {
 
   setSearchParameters(position)
-  const url = `https://data.usajobs.gov/api/Search?PositionTitle=${position}`;
-  var host = 'data.usajobs.gov';
-  var userAgent = 'nataliemcintyre2021@gmail.com';
-  var authKey = api_key;
-
-  fetch(url, {
-    method: 'GET',
-    headers: {
-      "Host": host,
-      "User-Agent": userAgent,
-      "Authorization-Key": authKey
-    }
-  })
-    .then(response => response.json())
+  getPositions(position)
     .then(data => {
-      console.log(data)
       setPostedPositions(data)
       setLoading(false)
     })
 
-    .catch(error => console.log("ERROR!", error))
+    .catch(error => setError(error.message))
 
 }
 
@@ -76,7 +62,7 @@ const addFavorite = (position) => {
         return (
           <PositionDetails
           fetchPositions= {fetchPositions} postedPositions={postedPositions}
-          searchParameters={searchParameters}
+          searchParameters={match.params.searchParameters}
           loading={loading}
           setLoading={setLoading}
           addFavorite={addFavorite}

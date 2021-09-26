@@ -35,7 +35,7 @@ if (favorites) {
 
     return (
       <>
-      {console.log("THE CARD")}
+
       <section className="details">
         <div className="details-card">
           <h1 className="heading-details">{ favorite.MatchedObjectDescriptor.PositionTitle }</h1>
@@ -54,16 +54,17 @@ if (favorites) {
 
 
   return (
+    <>
+
     <div className="favorite-container">
-    {console.log("THE CARD CONTAINER")}
+      <h1 className="fav-heading">Favorites</h1>
       {[favoriteCards]}
     </div>
+    </>
   )
 } else {
   return (
-    <>
-    {console.log("THE NULL CONTAINER")}
-    </>
+    null
   )
 }
 }
