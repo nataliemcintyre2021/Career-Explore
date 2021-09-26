@@ -80,6 +80,7 @@ const addFavorite = (position) => {
           loading={loading}
           setLoading={setLoading}
           addFavorite={addFavorite}
+          id={match.params.id}
           />
       )}} />
       <Footer />

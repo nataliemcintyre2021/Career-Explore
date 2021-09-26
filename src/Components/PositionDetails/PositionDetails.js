@@ -8,7 +8,7 @@ const [selectPosition, setSelectPosition] = useState()
 
 
 useEffect(() => {
-  let searchParams = window.location.pathname.split("/").splice(1)[0].replace('%20', " ")
+  let searchParams = decodeURI(window.location.pathname.split("/").splice(1)[0])
   fetchPositions(searchParams)
 }, [])
 
