@@ -13,9 +13,14 @@ useEffect(() => {
       setFavorites([...savedJobs])
     }
 
-
 }, [])
 
+const removeFromStorage = (id) => {
+  localStorage.removeItem(id)
+  const remainingCards = favorites.filter(card => id !== card.MatchedObjectId)
+  setFavorites([...remainingCards])
+  return favorites
+}
 
 if (favorites) {
   const favoriteCards = favorites.map(favorite => {
@@ -38,8 +43,10 @@ if (favorites) {
           <h2 className="heading-dept-details">{ favorite.MatchedObjectDescriptor.DepartmentName }</h2>
           <p className="role-question">What would you do in this role?</p>
           <p className="duties-details">{ theDuties.split() } </p>
+          <button className="delete-btn" onClick={() => removeFromStorage(favorite.MatchedObjectId)}>
+          &times;
+          </button>
         </div>
-
       </section>
       </>
     )
