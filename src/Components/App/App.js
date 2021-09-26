@@ -47,9 +47,11 @@ const fetchPositions = (position) => {
 
 const addFavorite = (position) => {
   if (!favorites.includes(position)) {
-      setFavorites([...favorites, position])
+    let stringifiedFavorite = JSON.stringify(position);
+    localStorage.setItem(`${position.MatchedObjectId}`, stringifiedFavorite)
+    }
   }
-}
+
 
 
 
@@ -66,7 +68,7 @@ const addFavorite = (position) => {
 
       <Route exact path="/favorites" render={() => {
         return (
-          <Favorites favorites={favorites}/>
+          <Favorites favorites={favorites} setFavorites={setFavorites}/>
         )
       }} />
 
