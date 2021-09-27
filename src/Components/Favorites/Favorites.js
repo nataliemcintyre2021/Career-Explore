@@ -34,7 +34,7 @@ if (favorites) {
             <h2 className="heading-org-details">{ favorite.MatchedObjectDescriptor.OrganizationName }</h2>
             <h2 className="heading-dept-details">{ favorite.MatchedObjectDescriptor.DepartmentName }</h2>
             <p className="role-question">What would you do in this role?</p>
-            <p className="duties-details">{ theList } </p>
+            <section className="duties-details">{ theList } </section>
           <div className="button-container">
             <button className="delete-btn" onClick={() => removeFromStorage(favorite.MatchedObjectId)}>
             Remove from Favorites

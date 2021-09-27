@@ -41,15 +41,14 @@ const getMajorDuties = () => {
     { selectPosition ?
       <section className="the-details">
         <div className="the-details-card">
-        <div className="favorite"><button class="favorite-button" onClick={() => addFavorite(selectPosition)}>♥ Add to Favorites</button></div>
+        <div className="favorite"><button className="favorite-button" onClick={() => addFavorite(selectPosition)}>♥ Add to Favorites</button></div>
           <h1 className="heading-details">{ selectPosition.MatchedObjectDescriptor.PositionTitle }</h1>
           <h2 className="heading-org-details">{ selectPosition.MatchedObjectDescriptor.OrganizationName }</h2>
           <h2 className="heading-dept-details">{ selectPosition.MatchedObjectDescriptor.DepartmentName }</h2>
-          <p className="role-question">What would you do in this role?</p>
-          <p className="duties-details">{ getMajorDuties() } </p>
+          <h2 className="role-question">What would you do in this role?</h2>
+          <section className="duties-details">{ getMajorDuties() } </section>
           <a className="app-link" href={selectPosition.MatchedObjectDescriptor.PositionURI ? selectPosition.MatchedObjectDescriptor.PositionURI : null}>Learn more about applying here!</a>
         </div>
-
       </section> :
         <NotFound/>
   }
