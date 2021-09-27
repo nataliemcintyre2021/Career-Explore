@@ -45,7 +45,7 @@ const SearchForm = ({ fetchPositions }) => {
               value={positionInput}
               onChange={event => handleChange(event)}
             />
-            <button className="job-search" onClick={(event) => submitInput(event)}>Search</button>
+            <button className="job-search" disabled={!positionInput} onClick={(event) => submitInput(event)}>Search</button>
         </section>
       </form>
 
