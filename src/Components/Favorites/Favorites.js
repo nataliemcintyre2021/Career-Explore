@@ -53,12 +53,13 @@ if (favorites) {
     <>
     <div className="favorite-container">
       {[favoriteCards]}
+      <p className="fav-prompt">Return Home to search for and add more favorites!</p>
     </div>
     </>
   )
 } else {
   return (
-    null
+    <p>Add more favorites!</p>
   )
 }
 }
