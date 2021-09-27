@@ -18,7 +18,6 @@ const [loading, setLoading] = useState()
 const [favorites, setFavorites] = useState([])
 const [error, setError] = useState()
 
-
 const fetchPositions = (position) => {
 setLoading(true)
   setSearchParameters(position)
@@ -27,9 +26,7 @@ setLoading(true)
       setPostedPositions(data)
       setLoading(false)
     })
-
     .catch(error => setError(true))
-
 }
 
 const addFavorite = (position) => {
@@ -39,27 +36,23 @@ const addFavorite = (position) => {
     }
   }
 
-
-
-
   return (
     <>
     {error ? <NotFound setError={setError}/> :
-
       <>
       <Header />
       <Switch>
       <Route exact path="/" render={() => {
         return (
-        <>
-        <SearchForm fetchPositions={fetchPositions}/>
-        <JobPositionsContainer
-        postedPositions={postedPositions}
-        searchParameters={searchParameters}
-        loading={loading}
-        error={error} />
-        </>
-      )}} />
+          <>
+          <SearchForm fetchPositions={fetchPositions}/>
+          <JobPositionsContainer
+          postedPositions={postedPositions}
+          searchParameters={searchParameters}
+          loading={loading}
+          error={error} />
+          </>
+        )}} />
 
       <Route exact path="/favorites" render={() => {
         return (
@@ -80,6 +73,7 @@ const addFavorite = (position) => {
           error={error}
           />
       )}} />
+
       <Route render={() => (
         <NotFound />
       )}/>

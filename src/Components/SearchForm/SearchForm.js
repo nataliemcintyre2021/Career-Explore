@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import "./SearchForm.css"
+import PropTypes from 'prop-types'
 import arrow from "../../icons8-down-arrow-64 (1).png"
 
 const SearchForm = ({ fetchPositions }) => {
@@ -19,12 +20,9 @@ const SearchForm = ({ fetchPositions }) => {
     setPositionInput("");
   }
 
-
   return (
     <>
-
     <main className="main-page">
-
       <form className="form-search">
         <section className="the-prompts">
           <div className="arrow-container">
@@ -48,10 +46,13 @@ const SearchForm = ({ fetchPositions }) => {
             <button className="job-search" disabled={!positionInput} onClick={(event) => submitInput(event)}>Search</button>
         </section>
       </form>
-
     </main>
     </>
   )
+}
+
+SearchForm.propTypes = {
+  fetchPositions: PropTypes.func
 }
 
 export default SearchForm;
