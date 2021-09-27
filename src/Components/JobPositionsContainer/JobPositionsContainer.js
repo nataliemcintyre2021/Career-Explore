@@ -2,10 +2,12 @@ import './JobPositionsContainer.css'
 import PositionCard from '../PositionCard/PositionCard'
 import Loader from '../Loader/Loader'
 import NotFound from '../NotFound/NotFound'
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 
 const JobPositionsContainer = ({ postedPositions, searchParameters, loading, error }) => {
+
 if (postedPositions) {
   const positionCards = postedPositions.SearchResult.SearchResultItems.map(position => {
     return (
@@ -31,23 +33,26 @@ if (postedPositions) {
       </div>
     </>
   )
-} else if (error) {
-  return (
-    <NotFound />
-  )
-} else if (loading) {
-    return (
-      <Loader />
+  } else if (error) {
+      return (
+        <NotFound />
     )
-} else {
-  return (
-    null
-  )
+  } else if (loading) {
+      return (
+        <Loader />
+      )
+  } else {
+      return (
+      null
+    )
+  }
 }
 
-
+JobPositionsContainer.propTypes = {
+  postedPositions: PropTypes.object,
+  searchParameters: PropTypes.string,
+  loading: PropTypes.bool,
+  error: PropTypes.bool
 }
-
-
 
 export default JobPositionsContainer;

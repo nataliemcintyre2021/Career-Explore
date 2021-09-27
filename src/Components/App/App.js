@@ -19,14 +19,14 @@ const [favorites, setFavorites] = useState([])
 const [error, setError] = useState()
 
 const fetchPositions = (position) => {
-setLoading(true)
-  setSearchParameters(position)
-  getPositions(position)
-    .then(data => {
-      setPostedPositions(data)
-      setLoading(false)
-    })
-    .catch(error => setError(true))
+  setLoading(true)
+    setSearchParameters(position)
+    getPositions(position)
+      .then(data => {
+        setPostedPositions(data)
+        setLoading(false)
+      })
+      .catch(error => setError(true))
 }
 
 const addFavorite = (position) => {
@@ -47,10 +47,10 @@ const addFavorite = (position) => {
           <>
           <SearchForm fetchPositions={fetchPositions}/>
           <JobPositionsContainer
-          postedPositions={postedPositions}
-          searchParameters={searchParameters}
-          loading={loading}
-          error={error} />
+            postedPositions={postedPositions}
+            searchParameters={searchParameters}
+            loading={loading}
+            error={error} />
           </>
         )}} />
 
@@ -63,14 +63,15 @@ const addFavorite = (position) => {
       <Route exact path="/:searchParameters/:id" render={({ match }) => {
         return (
           <PositionDetails
-          fetchPositions= {fetchPositions} postedPositions={postedPositions}
-          searchParameters={match.params.searchParameters}
-          loading={loading}
-          setLoading={setLoading}
-          addFavorite={addFavorite}
-          id={match.params.id}
-          setError={setError}
-          error={error}
+            fetchPositions= {fetchPositions}
+            postedPositions={postedPositions}
+            searchParameters={match.params.searchParameters}
+            loading={loading}
+            setLoading={setLoading}
+            addFavorite={addFavorite}
+            id={match.params.id}
+            setError={setError}
+            error={error}
           />
       )}} />
 

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react'
 import "./SearchForm.css"
 import PropTypes from 'prop-types'
 import arrow from "../../icons8-down-arrow-64 (1).png"
