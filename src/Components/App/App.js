@@ -38,6 +38,7 @@ const addFavorite = (position) => {
 
   return (
     <>
+    {error && <NotFound />}
       <Header />
       <Switch>
       <Route exact path="/" render={() => {
