@@ -1,9 +1,8 @@
-describe("User Career Search Page Flows", () => {
-
+describe("User Career Explore Page Flows", () => {
+  beforeEach(() => {
+    cy.visit('http://localhost:3000/')
+  })
   describe("Main Page Render", () => {
-    beforeEach(() => {
-      cy.visit('http://localhost:3000/')
-    })
 
     it("Should have a header with text Career Explore on load", () => {
       cy.get('.header').find('a').find('.title').find('h1').contains("Career Explore")
@@ -37,6 +36,9 @@ describe("User Career Search Page Flows", () => {
       cy.get('.job-container').find('.card').find('p').contains('PROF OF SOFTWARE ENGINEERING MANAGEMENT (DEV/SEC/OPS)')
       cy.get('.job-container').find('.card').click()
     })
+  })
+
+  describe("Details and Favorites Page Render", () => {
 
     it("Should show job duty details of specific job posting", () => {
       cy.visit('http://localhost:3000/Software%20Engineer/599068800')
@@ -64,7 +66,6 @@ describe("User Career Search Page Flows", () => {
       cy.visit('http://localhost:3000/favorites')
       cy.get('.favorite-container').find('.details').find('.button-container').find('.delete-btn').click()
       cy.get('.details').should('not.exist')
-
     })
 
     it("Should render a 404 page for nonexistant url", () => {
