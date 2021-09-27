@@ -6,7 +6,8 @@ import SearchForm from '../SearchForm/SearchForm'
 import JobPositionsContainer from '../JobPositionsContainer/JobPositionsContainer'
 import PositionDetails from '../PositionDetails/PositionDetails'
 import Favorites from '../Favorites/Favorites'
-import { Route } from 'react-router-dom';
+import NotFound from '../NotFound/NotFound'
+import { Route, Switch } from 'react-router-dom';
 import { getPositions } from '../../apiCalls'
 
 const dotenv = require('dotenv').config()
@@ -15,7 +16,7 @@ const [postedPositions, setPostedPositions] = useState()
 const [searchParameters, setSearchParameters] = useState()
 const [loading, setLoading] = useState()
 const [favorites, setFavorites] = useState([])
-const [error, setError] = useState('')
+const [error, setError] = useState()
 
 
 const fetchPositions = (position) => {
@@ -27,7 +28,7 @@ setLoading(true)
       setLoading(false)
     })
 
-    .catch(error => setError(error.message))
+    .catch(error => setError(true))
 
 }
 
@@ -43,12 +44,19 @@ const addFavorite = (position) => {
 
   return (
     <>
+    {error && <NotFound />}
+
       <Header />
+      <Switch>
       <Route exact path="/" render={() => {
         return (
         <>
         <SearchForm fetchPositions={fetchPositions}/>
-        <JobPositionsContainer postedPositions={postedPositions} searchParameters={searchParameters} loading={loading}/>
+        <JobPositionsContainer
+        postedPositions={postedPositions}
+        searchParameters={searchParameters}
+        loading={loading}
+        error={error} />
         </>
       )}} />
 
@@ -67,8 +75,14 @@ const addFavorite = (position) => {
           setLoading={setLoading}
           addFavorite={addFavorite}
           id={match.params.id}
+          setError={setError}
+          error={error}
           />
       )}} />
+      <Route render={() => (
+        <NotFound />
+      )}/>
+      </ Switch>
       <Footer />
     </>
   );

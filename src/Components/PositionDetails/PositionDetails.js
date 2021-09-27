@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Loader from '../Loader/Loader'
 
 
-const PositionDetails = ({ fetchPositions, postedPositions, currentPosition, searchParameters, loading, setLoading, addFavorite, id }) => {
+const PositionDetails = ({ fetchPositions, postedPositions, currentPosition, searchParameters, loading, setLoading, addFavorite, id, setError, error }) => {
 
 const [selectPosition, setSelectPosition] = useState()
 
@@ -21,6 +21,10 @@ useEffect(() => {
 
 const setPositionDetails = () => {
   let thePosition = postedPositions.SearchResult.SearchResultItems.find(position => position.MatchedObjectId === id)
+
+  if (!thePosition) {
+    setError(true)
+  }
 
   if (postedPositions) {
     setSelectPosition(thePosition)

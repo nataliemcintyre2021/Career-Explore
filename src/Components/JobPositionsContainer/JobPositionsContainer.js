@@ -1,10 +1,11 @@
 import './JobPositionsContainer.css'
 import PositionCard from '../PositionCard/PositionCard'
 import Loader from '../Loader/Loader'
+import NotFound from '../NotFound/NotFound'
 import { NavLink } from 'react-router-dom';
 
 
-const JobPositionsContainer = ({ postedPositions, searchParameters, loading }) => {
+const JobPositionsContainer = ({ postedPositions, searchParameters, loading, error }) => {
 if (postedPositions) {
   const positionCards = postedPositions.SearchResult.SearchResultItems.map(position => {
     return (
@@ -30,12 +31,18 @@ if (postedPositions) {
       </div>
     </>
   )
-} else if (loading) {
+} else if (error) {
   return (
-    <Loader />
+    <NotFound />
   )
+} else if (loading) {
+    return (
+      <Loader />
+    )
 } else {
-    return null
+  return (
+    null
+  )
 }
 
 
