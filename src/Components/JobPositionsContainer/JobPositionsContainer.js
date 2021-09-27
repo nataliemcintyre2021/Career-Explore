@@ -33,10 +33,6 @@ if (postedPositions) {
       </div>
     </>
   )
-  } else if (error) {
-      return (
-        <NotFound />
-    )
   } else if (loading) {
       return (
         <Loader />

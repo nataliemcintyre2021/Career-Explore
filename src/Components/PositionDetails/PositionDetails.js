@@ -1,10 +1,11 @@
 import './PositionDetails.css'
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 import Loader from '../Loader/Loader'
 import NotFound from '../NotFound/NotFound'
+import PropTypes from 'prop-types'
 
 
-const PositionDetails = ({ fetchPositions, postedPositions, currentPosition, searchParameters, loading, setLoading, addFavorite, id, setError, error }) => {
+const PositionDetails = ({ fetchPositions, postedPositions, searchParameters, loading, addFavorite, id }) => {
 
 const [selectPosition, setSelectPosition] = useState()
 
@@ -15,7 +16,7 @@ useEffect(() => {
 
 useEffect(() => {
   if (postedPositions) {
-      setPositionDetails()
+    setPositionDetails()
   }
 }, [loading])
 
@@ -51,9 +52,18 @@ const getMajorDuties = () => {
 
       </section> :
         <NotFound/>
+  }
+    </>
+  )
 }
-  </>
-)
+
+PositionDetails.propTypes = {
+  fetchPositions: PropTypes.func,
+  postedPositions: PropTypes.object,
+  searchParameters: PropTypes.string,
+  loading: PropTypes.bool,
+  addFavorite: PropTypes.func,
+  id: PropTypes.string
 }
 
 export default PositionDetails

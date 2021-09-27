@@ -1,13 +1,13 @@
-import './App.css';
-import { useState } from 'react';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
+import './App.css'
+import { useState } from 'react'
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
 import SearchForm from '../SearchForm/SearchForm'
 import JobPositionsContainer from '../JobPositionsContainer/JobPositionsContainer'
 import PositionDetails from '../PositionDetails/PositionDetails'
 import Favorites from '../Favorites/Favorites'
 import NotFound from '../NotFound/NotFound'
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom'
 import { getPositions } from '../../apiCalls'
 
 const dotenv = require('dotenv').config()
@@ -38,8 +38,6 @@ const addFavorite = (position) => {
 
   return (
     <>
-    {error ? <NotFound setError={setError}/> :
-      <>
       <Header />
       <Switch>
       <Route exact path="/" render={() => {
@@ -67,11 +65,8 @@ const addFavorite = (position) => {
             postedPositions={postedPositions}
             searchParameters={match.params.searchParameters}
             loading={loading}
-            setLoading={setLoading}
             addFavorite={addFavorite}
             id={match.params.id}
-            setError={setError}
-            error={error}
           />
       )}} />
 
@@ -81,8 +76,6 @@ const addFavorite = (position) => {
       </ Switch>
       <Footer />
       </>
-    }
-    </>
   );
 }
 

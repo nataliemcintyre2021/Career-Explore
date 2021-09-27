@@ -1,5 +1,6 @@
 import './Favorites.css'
-import { useEffect } from 'react';
+import { useEffect } from 'react'
+import PropTypes from 'prop-types'
 
 const Favorites = ({ favorites, setFavorites }) => {
 
@@ -12,7 +13,6 @@ useEffect(() => {
       })
       setFavorites([...savedJobs])
     }
-
 }, [])
 
 const removeFromStorage = (id) => {
@@ -30,16 +30,14 @@ if (favorites) {
       <>
       <section className="details">
         <div className="details-card">
-
             <h1 className="heading-details">{ favorite.MatchedObjectDescriptor.PositionTitle }</h1>
             <h2 className="heading-org-details">{ favorite.MatchedObjectDescriptor.OrganizationName }</h2>
             <h2 className="heading-dept-details">{ favorite.MatchedObjectDescriptor.DepartmentName }</h2>
             <p className="role-question">What would you do in this role?</p>
             <p className="duties-details">{ theList } </p>
-
           <div className="button-container">
             <button className="delete-btn" onClick={() => removeFromStorage(favorite.MatchedObjectId)}>
-          Remove from Favorites
+            Remove from Favorites
             </button>
           </div>
         </div>
@@ -47,7 +45,6 @@ if (favorites) {
       </>
     )
   })
-
 
   return (
     <>
@@ -57,13 +54,12 @@ if (favorites) {
     </div>
     </>
   )
-} else {
-  return (
-    <p>Add more favorites!</p>
-  )
-}
+  }
 }
 
-
+Favorites.propTypes = {
+  favorites: PropTypes.array,
+  setFavorites: PropTypes.func,
+}
 
 export default Favorites;

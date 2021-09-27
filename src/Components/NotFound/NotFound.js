@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 
 const NotFound = () => {
 
-
   return (
   <div className="error-404">
     <NavLink className="go-back" to={"/"}>
@@ -13,8 +12,6 @@ const NotFound = () => {
   </div>
   )
 }
-
-
 
 
 export default NotFound;
