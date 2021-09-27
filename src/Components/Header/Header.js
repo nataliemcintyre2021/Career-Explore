@@ -1,5 +1,5 @@
 import "./Header.css"
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -12,18 +12,8 @@ const Header = () => {
         </div>
       </div>
       <section className="menu">
-        <NavLink className="home" to={`/`}>
-          <a
-            href=''
-            className='home-page'
-            >Home</a>
-        </NavLink>
-        <NavLink className="favs" to={`/favorites`}>
-          <a
-            href=''
-            className='favorites-page'
-            >Favorites</a>
-        </NavLink>
+        <NavLink exact to={"/"} className="home">Home</NavLink>
+        <NavLink exact to={"/favorites"} className="favs" >Favorites</NavLink>
       </section>
       <NavLink className="title-link" to={"/"}>
         <section className="title">

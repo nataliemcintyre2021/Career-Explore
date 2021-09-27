@@ -40,9 +40,9 @@ const getMajorDuties = () => {
   return (
     <>
     { selectPosition ?
-      <section className="details">
-        <div className="details-card">
-        <div className="favorite"><button class="favorite-button" onClick={() => addFavorite(selectPosition)}>♥ Favorite</button></div>
+      <section className="the-details">
+        <div className="the-details-card">
+        <div className="favorite"><button class="favorite-button" onClick={() => addFavorite(selectPosition)}>♥ Add to Favorites</button></div>
           <h1 className="heading-details">{ selectPosition.MatchedObjectDescriptor.PositionTitle }</h1>
           <h2 className="heading-org-details">{ selectPosition.MatchedObjectDescriptor.OrganizationName }</h2>
           <h2 className="heading-dept-details">{ selectPosition.MatchedObjectDescriptor.DepartmentName }</h2>

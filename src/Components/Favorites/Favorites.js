@@ -30,14 +30,18 @@ if (favorites) {
       <>
       <section className="details">
         <div className="details-card">
-          <h1 className="heading-details">{ favorite.MatchedObjectDescriptor.PositionTitle }</h1>
-          <h2 className="heading-org-details">{ favorite.MatchedObjectDescriptor.OrganizationName }</h2>
-          <h2 className="heading-dept-details">{ favorite.MatchedObjectDescriptor.DepartmentName }</h2>
-          <p className="role-question">What would you do in this role?</p>
-          <p className="duties-details">{ theList } </p>
-          <button className="delete-btn" onClick={() => removeFromStorage(favorite.MatchedObjectId)}>
-          &times;
-          </button>
+
+            <h1 className="heading-details">{ favorite.MatchedObjectDescriptor.PositionTitle }</h1>
+            <h2 className="heading-org-details">{ favorite.MatchedObjectDescriptor.OrganizationName }</h2>
+            <h2 className="heading-dept-details">{ favorite.MatchedObjectDescriptor.DepartmentName }</h2>
+            <p className="role-question">What would you do in this role?</p>
+            <p className="duties-details">{ theList } </p>
+
+          <div className="button-container">
+            <button className="delete-btn" onClick={() => removeFromStorage(favorite.MatchedObjectId)}>
+          Remove from Favorites
+            </button>
+          </div>
         </div>
       </section>
       </>
@@ -47,9 +51,7 @@ if (favorites) {
 
   return (
     <>
-
     <div className="favorite-container">
-      <h1 className="fav-heading">Favorites</h1>
       {[favoriteCards]}
     </div>
     </>

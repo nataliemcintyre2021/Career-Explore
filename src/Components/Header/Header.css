@@ -55,6 +55,9 @@ h1 {
 .favs,
 .home {
   text-decoration: none;
+  cursor: pointer;
+  color: #012D5B;
+  margin: 13px;
 }
 
 .career-title {
