@@ -1,6 +1,7 @@
 import './PositionDetails.css'
 import { useEffect, useState } from 'react';
 import Loader from '../Loader/Loader'
+import NotFound from '../NotFound/NotFound'
 
 
 const PositionDetails = ({ fetchPositions, postedPositions, currentPosition, searchParameters, loading, setLoading, addFavorite, id, setError, error }) => {
@@ -22,10 +23,6 @@ useEffect(() => {
 const setPositionDetails = () => {
   let thePosition = postedPositions.SearchResult.SearchResultItems.find(position => position.MatchedObjectId === id)
 
-  if (!thePosition) {
-    setError(true)
-  }
-
   if (postedPositions) {
     setSelectPosition(thePosition)
   }
@@ -39,6 +36,7 @@ const getMajorDuties = () => {
 
   return (
     <>
+    {loading && <Loader />}
     { selectPosition ?
       <section className="the-details">
         <div className="the-details-card">
@@ -52,7 +50,7 @@ const getMajorDuties = () => {
         </div>
 
       </section> :
-        <Loader />
+        <NotFound/>
 }
   </>
 )
