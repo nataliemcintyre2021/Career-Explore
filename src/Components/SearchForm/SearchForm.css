@@ -1,69 +1,102 @@
-
-
 .main-page {
   height: 100%;
   width: 100%;
   background-color: #190183;
-
-
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 
 }
 
-.prompts {
-  position: absolute;
-
+.prompt {
+  text-align: center;
   color: white;
-}
-
-.search-prompt {
-  position: absolute;
+  font-size: 20px;
+  margin-top: 10px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   color: white;
-  width: 25%;
-  text-align: center;
 }
 
 form {
 
-  background-color: #190183;
   text-align: center;
   padding-top: 5vh;
   padding-bottom: 40vh;
-  height: 5vh;
-
+  height: 4vh;
 
 }
-
 
 input {
   margin: 10px;
   border: 1px solid transparent;
   background-color: #f1f1f1;
   border-radius: 20px;
-  width: 80%;
+  width: 40%;
   padding: 10px;
   font-size: 1.1em;
 }
 
 .form-search {
+  margin-top: 40vh;
   display: flex;
-  justify-content: center;
-  margin-top: 50vh;
-
-
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 3vh;
+  padding: 10vh;
+  height: 30%;
+  border-radius: 20px;
+  width: 60%;
+  background-color: #190183;
 }
 
 button {
-  width: 30%;
+  width: 15%;
   margin-left: 2%;
   border: none;
   border-radius: 5%;
   height: 3vh;
   font-size: .9em;
   cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  color: #190183;
+}
+
+.the-prompts {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.arrow-container,
+.arrow-container2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.arrow {
+  transform: rotate(-90deg);
+}
+
+.question-container {
+
+
+}
+
+.question {
+  font-size: 20px;
+}
+
+.the-search {
+
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import "./SearchForm.css"
-
+import arrow from "../../icons8-down-arrow-64 (1).png"
 
 const SearchForm = ({ fetchPositions }) => {
   const [positionInput, setPositionInput] = useState("");
@@ -25,22 +25,29 @@ const SearchForm = ({ fetchPositions }) => {
 
     <main className="main-page">
 
-      <section className="search-prompt">
-        <p>Search for any government job title below and learn about what they get to do!</p>
-      </section>
-      <section className="form-search">
-        <form>
-          <input
-            type='text'
-            placeholder='Ex: Software Engineer'
-            name='positionInput'
-            value={positionInput}
-            onChange={event => handleChange(event)}
-          />
-          <button className="job-search" onClick={(event) => submitInput(event)}>Search</button>
-        </form>
-
-      </section>
+      <form className="form-search">
+        <section className="the-prompts">
+          <div className="arrow-container">
+            <img className="arrow" src={arrow} alt="Arrow"/>
+            <p className="question">Do you have interest in a US government role?</p>
+          </div>
+          <div className="arrow-container2">
+            <img className="arrow" src={arrow} alt="Arrow"/>
+            <p className="question">Put on any job “hat” for a moment and imagine yourself with a certain job title!</p>
+          </div>
+        </section>
+          <section className="the-search">
+            <p className="prompt">Search for any government job title and learn about what they get to do!</p>
+            <input
+              type='text'
+              placeholder='Ex: Software Engineer'
+              name='positionInput'
+              value={positionInput}
+              onChange={event => handleChange(event)}
+            />
+            <button className="job-search" onClick={(event) => submitInput(event)}>Search</button>
+        </section>
+      </form>
 
     </main>
     </>

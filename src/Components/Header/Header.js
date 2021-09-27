@@ -12,18 +12,18 @@ const Header = () => {
         </div>
       </div>
       <section className="menu">
-      <NavLink className="favs" to={`/favorites`}>
-        <a
-          href=''
-          className='favorites-page'
-          >Favorites</a>
-      </NavLink>
-      <NavLink className="jobs" to={`/job-resources`}>
-        <a
-          href=''
-          className='resources-page'
-          >Job Resources</a>
-      </NavLink>
+        <NavLink className="home" to={`/`}>
+          <a
+            href=''
+            className='home-page'
+            >Home</a>
+        </NavLink>
+        <NavLink className="favs" to={`/favorites`}>
+          <a
+            href=''
+            className='favorites-page'
+            >Favorites</a>
+        </NavLink>
       </section>
       <NavLink className="title-link" to={"/"}>
         <section className="title">

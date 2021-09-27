@@ -41,14 +41,20 @@ h1 {
   justify-content: flex-end;
   align-items: flex-end;
   width: 100%;
+  cursor: pointer;
 }
 
 .favorites-page,
-.resources-page {
+.home-page {
   text-decoration: none;
   cursor: pointer;
   color: #012D5B;
   margin: 13px;
+}
+
+.favs,
+.home {
+  text-decoration: none;
 }
 
 .career-title {
@@ -65,4 +71,5 @@ h1 {
 
 .custom-shape-divider-top-1632345337 .shape-fill {
     fill: #EDDE18;
+
 }

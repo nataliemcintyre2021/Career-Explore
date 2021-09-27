@@ -33,17 +33,13 @@ const setPositionDetails = () => {
 
 
 
+
+
 const getMajorDuties = () => {
-  let theDuties = ''
-  selectPosition.MatchedObjectDescriptor.UserArea.Details.MajorDuties.forEach((duty, index) => {
-    if (index != selectPosition.MatchedObjectDescriptor.UserArea.Details.MajorDuties.length - 1) {
-        theDuties += `${duty}  `;
-    } else {
-        theDuties += duty;
-    }
-  })
-  theDuties.split()
-  return theDuties;
+  console.log("ARRAY", selectPosition.MatchedObjectDescriptor.UserArea.Details.MajorDuties)
+  const theList = selectPosition.MatchedObjectDescriptor.UserArea.Details.MajorDuties.map((duty, index) => <p className="duty"> • {duty} </p>)
+
+  return theList;
 }
 
   return (
