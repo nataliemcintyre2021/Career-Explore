@@ -1,5 +1,6 @@
 import './Favorites.css'
-import { useEffect } from 'react';
+import { useEffect } from 'react'
+import PropTypes from 'prop-types'
 
 const Favorites = ({ favorites, setFavorites }) => {
 
@@ -12,7 +13,6 @@ useEffect(() => {
       })
       setFavorites([...savedJobs])
     }
-
 }, [])
 
 const removeFromStorage = (id) => {
@@ -24,50 +24,42 @@ const removeFromStorage = (id) => {
 
 if (favorites) {
   const favoriteCards = favorites.map(favorite => {
-    let theDuties = ''
-    favorite.MatchedObjectDescriptor.UserArea.Details.MajorDuties.forEach((duty, index) => {
-      if (index != favorite.MatchedObjectDescriptor.UserArea.Details.MajorDuties.length - 1) {
-          theDuties += `${duty}  `;
-      } else {
-          theDuties += duty;
-      }
-    })
+  const theList = favorite.MatchedObjectDescriptor.UserArea.Details.MajorDuties.map((duty, index) => <p className="duty"> • {duty} </p>)
 
     return (
       <>
-      {console.log("THE CARD")}
       <section className="details">
         <div className="details-card">
-          <h1 className="heading-details">{ favorite.MatchedObjectDescriptor.PositionTitle }</h1>
-          <h2 className="heading-org-details">{ favorite.MatchedObjectDescriptor.OrganizationName }</h2>
-          <h2 className="heading-dept-details">{ favorite.MatchedObjectDescriptor.DepartmentName }</h2>
-          <p className="role-question">What would you do in this role?</p>
-          <p className="duties-details">{ theDuties.split() } </p>
-          <button className="delete-btn" onClick={() => removeFromStorage(favorite.MatchedObjectId)}>
-          &times;
-          </button>
+            <h1 className="heading-details">{ favorite.MatchedObjectDescriptor.PositionTitle }</h1>
+            <h2 className="heading-org-details">{ favorite.MatchedObjectDescriptor.OrganizationName }</h2>
+            <h2 className="heading-dept-details">{ favorite.MatchedObjectDescriptor.DepartmentName }</h2>
+            <p className="role-question">What would you do in this role?</p>
+            <section className="duties-details">{ theList } </section>
+          <div className="button-container">
+            <button className="delete-btn" onClick={() => removeFromStorage(favorite.MatchedObjectId)}>
+            Remove from Favorites
+            </button>
+          </div>
         </div>
       </section>
       </>
     )
   })
 
-
-  return (
-    <div className="favorite-container">
-    {console.log("THE CARD CONTAINER")}
-      {[favoriteCards]}
-    </div>
-  )
-} else {
   return (
     <>
-    {console.log("THE NULL CONTAINER")}
+    <div className="favorite-container">
+      {[favoriteCards]}
+      <p className="fav-prompt">Return Home to search for and add more favorites!</p>
+    </div>
     </>
   )
-}
+  }
 }
 
-
+Favorites.propTypes = {
+  favorites: PropTypes.array,
+  setFavorites: PropTypes.func,
+}
 
 export default Favorites;

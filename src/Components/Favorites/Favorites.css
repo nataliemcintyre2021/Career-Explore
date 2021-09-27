@@ -1,20 +1,67 @@
 .favorite-container {
-  padding: 1em;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  background-color: #190284;
+  height: 100%;
+
+  background-color: #190183;
+
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.details {
+  height: 100%;
+
+  background-color: #190183;
   margin: 0;
+
+  padding-top: 50px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.fav-prompt {
+  height: 100vh;
+
+  background-color: #190183;
+  margin: 0;
+
+  padding-top: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .delete-btn {
   display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
-  margin: 0;
+  margin: 2em;
   border-radius: 5%;
-  height: 5vh;
-  width: 3vw;
-  background-color: #FFF;
-  color: #005470;
-  font-size: 2.5em;
-  padding-left: 5px;
+  height: 25px;;
+  width: 160px;
+  background-color: #190183;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.details-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 0;
+  margin-top: 20vh;
+  margin-bottom: 10vh;
+  height: 80%;
+  width: 90%;
 }

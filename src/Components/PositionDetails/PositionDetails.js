@@ -1,68 +1,68 @@
 import './PositionDetails.css'
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
+import Loader from '../Loader/Loader'
+import NotFound from '../NotFound/NotFound'
+import PropTypes from 'prop-types'
 
 
-const PositionDetails = ({ fetchPositions, postedPositions, currentPosition, searchParameters, loading, setLoading, addFavorite }) => {
+const PositionDetails = ({ fetchPositions, postedPositions, searchParameters, loading, addFavorite, id }) => {
 
 const [selectPosition, setSelectPosition] = useState()
 
 
 useEffect(() => {
-  let searchParams = decodeURI(window.location.pathname.split("/").splice(1)[0])
-  fetchPositions(searchParams)
+  fetchPositions(searchParameters)
 }, [])
 
 useEffect(() => {
   if (postedPositions) {
-      setPositionDetails()
+    setPositionDetails()
   }
 }, [loading])
 
 
 const setPositionDetails = () => {
-  let urlId = window.location.pathname.split("/").slice(2).join();
-
-  let thePosition = postedPositions.SearchResult.SearchResultItems.find(position => position.MatchedObjectId === urlId)
+  let thePosition = postedPositions.SearchResult.SearchResultItems.find(position => position.MatchedObjectId === id)
 
   if (postedPositions) {
     setSelectPosition(thePosition)
   }
 }
 
-
-
 const getMajorDuties = () => {
-  let theDuties = ''
-  selectPosition.MatchedObjectDescriptor.UserArea.Details.MajorDuties.forEach((duty, index) => {
-    if (index != selectPosition.MatchedObjectDescriptor.UserArea.Details.MajorDuties.length - 1) {
-        theDuties += `${duty}  `;
-    } else {
-        theDuties += duty;
-    }
-  })
-  theDuties.split()
-  return theDuties;
+  const theList = selectPosition.MatchedObjectDescriptor.UserArea.Details.MajorDuties.map((duty, index) => <p className="duty"> • {duty} </p>)
+
+  return theList;
 }
 
   return (
     <>
-    { selectPosition &&
-      <section className="details">
-        <div className="details-card">
-        <div className="favorite"><button class="favorite-button" onClick={() => addFavorite(selectPosition)}>♥ Favorite</button></div>
+    {loading && <Loader />}
+    { selectPosition ?
+      <section className="the-details">
+        <div className="the-details-card">
+        <div className="favorite"><button className="favorite-button" onClick={() => addFavorite(selectPosition)}>♥ Add to Favorites</button></div>
           <h1 className="heading-details">{ selectPosition.MatchedObjectDescriptor.PositionTitle }</h1>
           <h2 className="heading-org-details">{ selectPosition.MatchedObjectDescriptor.OrganizationName }</h2>
           <h2 className="heading-dept-details">{ selectPosition.MatchedObjectDescriptor.DepartmentName }</h2>
-          <p className="role-question">What would you do in this role?</p>
-          <p className="duties-details">{ getMajorDuties() } </p>
+          <h2 className="role-question">What would you do in this role?</h2>
+          <section className="duties-details">{ getMajorDuties() } </section>
           <a className="app-link" href={selectPosition.MatchedObjectDescriptor.PositionURI ? selectPosition.MatchedObjectDescriptor.PositionURI : null}>Learn more about applying here!</a>
         </div>
-
-      </section>
-    }
-  </>
+      </section> :
+        <NotFound/>
+  }
+    </>
   )
 }
 
+PositionDetails.propTypes = {
+  fetchPositions: PropTypes.func,
+  postedPositions: PropTypes.object,
+  searchParameters: PropTypes.string,
+  loading: PropTypes.bool,
+  addFavorite: PropTypes.func,
+  id: PropTypes.string
+}
 
 export default PositionDetails

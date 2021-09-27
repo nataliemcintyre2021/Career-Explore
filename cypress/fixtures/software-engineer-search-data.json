@@ -1,0 +1,178 @@
+{
+    "LanguageCode": "EN",
+    "SearchParameters": {},
+    "SearchResult": {
+        "SearchResultCount": 25,
+        "SearchResultCountAll": 751,
+        "SearchResultItems": [
+            {
+                "MatchedObjectId": "599068800",
+                "MatchedObjectDescriptor": {
+                    "PositionID": "DAU-21-11093813",
+                    "PositionTitle": "PROF OF SOFTWARE ENGINEERING MANAGEMENT (DEV/SEC/OPS)",
+                    "PositionURI": "https://www.usajobs.gov:443/GetJob/ViewDetails/599068800",
+                    "ApplyURI": [
+                        "https://www.usajobs.gov:443/GetJob/ViewDetails/599068800?PostingChannelID="
+                    ],
+                    "PositionLocationDisplay": "Multiple Locations",
+                    "PositionLocation": [
+                        {
+                            "LocationName": "Huntsville, Alabama",
+                            "CountryCode": "United States",
+                            "CountrySubDivisionCode": "Alabama",
+                            "CityName": "Huntsville, Alabama",
+                            "Longitude": -86.585,
+                            "Latitude": 34.7291
+                        },
+                        {
+                            "LocationName": "San Diego, California",
+                            "CountryCode": "United States",
+                            "CountrySubDivisionCode": "California",
+                            "CityName": "San Diego, California",
+                            "Longitude": -117.162,
+                            "Latitude": 32.7157
+                        },
+                        {
+                            "LocationName": "Hanscom AFB, Massachusetts",
+                            "CountryCode": "United States",
+                            "CountrySubDivisionCode": "Massachusetts",
+                            "CityName": "Hanscom AFB, Massachusetts",
+                            "Longitude": -71.2763,
+                            "Latitude": 42.4587
+                        },
+                        {
+                            "LocationName": "California, Maryland",
+                            "CountryCode": "United States",
+                            "CountrySubDivisionCode": "Maryland",
+                            "CityName": "California, Maryland",
+                            "Longitude": -76.5198,
+                            "Latitude": 38.3036
+                        },
+                        {
+                            "LocationName": "Kettering, Ohio",
+                            "CountryCode": "United States",
+                            "CountrySubDivisionCode": "Ohio",
+                            "CityName": "Kettering, Ohio",
+                            "Longitude": -84.1629,
+                            "Latitude": 39.6952
+                        },
+                        {
+                            "LocationName": "Hill AFB, Utah",
+                            "CountryCode": "United States",
+                            "CountrySubDivisionCode": "Utah",
+                            "CityName": "Hill AFB, Utah",
+                            "Longitude": -111.9896,
+                            "Latitude": 41.1251
+                        },
+                        {
+                            "LocationName": "Fort Belvoir, Virginia",
+                            "CountryCode": "United States",
+                            "CountrySubDivisionCode": "Virginia",
+                            "CityName": "Fort Belvoir, Virginia",
+                            "Longitude": -77.136185,
+                            "Latitude": 38.68809
+                        },
+                        {
+                            "LocationName": "Norfolk, Virginia",
+                            "CountryCode": "United States",
+                            "CountrySubDivisionCode": "Virginia",
+                            "CityName": "Norfolk, Virginia",
+                            "Longitude": -76.28507,
+                            "Latitude": 36.846825
+                        }
+                    ],
+                    "OrganizationName": "Defense Acquisition University",
+                    "DepartmentName": "Department of Defense",
+                    "JobCategory": [
+                        {
+                            "Name": "Computer Engineering",
+                            "Code": "0854"
+                        }
+                    ],
+                    "JobGrade": [
+                        {
+                            "Code": "AD"
+                        }
+                    ],
+                    "PositionSchedule": [
+                        {
+                            "Name": "Full-time",
+                            "Code": "1"
+                        }
+                    ],
+                    "PositionOfferingType": [
+                        {
+                            "Name": "3 Years",
+                            "Code": "15319"
+                        }
+                    ],
+                    "QualificationSummary": "In-depth knowledge and experience in developing and acquiring software for National Security Systems (NSS) or Defense Business Systems (DBS) programs or industry equivalent. Demonstrated software assurance, design, planning, provenance, testing, implementation and maintenance efforts to support the planning and execution of acquisition programs from a government or industry perspective. Demonstrated successful performance within the defense (government) sector or private (commercial) sectors related to DoD software or IT systems development and acquisition is required. Within the planning and execution functions, specific expertise is required in problem solving using critical thinking for software assessment. Experience in managing software development projects using AGILE methods is required. Experience in developing. creating, acquiring, configuring, deploying and implementing DevSecOps is highly desired. Experience in developing. creating, acquiring, configuring, deploying and implementing Cloud Services is highly desired. DAWIA level III certification in the Information Technology or Engineering career fields is highly desired. Professional certifications such as AWS Certified DevOps Engineer - Professional, DevOps Foundation Certification, DevSecOps Leader (DOL) Certification, PMI Agile Certified Practitioner (PMI-ACP), ScrumMaster (CSM), ICAgile Certified Professional in Agile Coaching (ICP-ACC), AWS Cloud Computing Certification are desired.",
+                    "PositionRemuneration": [
+                        {
+                            "MinimumRange": "110867.0",
+                            "MaximumRange": "172500.0",
+                            "RateIntervalCode": "Per Year"
+                        }
+                    ],
+                    "PositionStartDate": "2021-04-22T00:00:00.0000",
+                    "PositionEndDate": "2021-10-22T23:59:00.9970",
+                    "PublicationStartDate": "2021-04-22T00:00:00.0000",
+                    "ApplicationCloseDate": "2021-10-22T23:59:00.9970",
+                    "PositionFormattedDescription": [
+                        {
+                            "Label": "Dynamic Teaser",
+                            "LabelDescription": "Hit highlighting for keyword searches."
+                        }
+                    ],
+                    "UserArea": {
+                        "Details": {
+                            "JobSummary": "The Defense Acquisition University (DAU) is the recognized leader as a corporate university, advancing the use of technology in all areas of education. The professional faculty and staff at DAU work in a strong team environment to continuously improve the ways we help our students learn by delivering the right knowledge and skills at the point of need. Come join this dynamic team using your expertise to make a real impact in the acquisition community.",
+                            "WhoMayApply": {
+                                "Name": "",
+                                "Code": ""
+                            },
+                            "LowGrade": "13",
+                            "HighGrade": "13",
+                            "PromotionPotential": "None",
+                            "OrganizationCodes": "DD/DD81",
+                            "Relocation": "False",
+                            "HiringPath": [
+                                "public"
+                            ],
+                            "TotalOpenings": "1",
+                            "AgencyMarketingStatement": "More than one selection may be made from this announcement.",
+                            "TravelCode": "2",
+                            "ApplyOnlineUrl": "https://apply.usastaffing.gov/Application/Apply",
+                            "DetailStatusUrl": "https://apply.usastaffing.gov/Application/ApplicationStatus",
+                            "MajorDuties": [
+                                "This position develops training materials and provides training to the DoD acquisition workforce in the areas associated with engineering management, with emphasis on modern software development methodologies. The holder of the position will also conduct research and analysis of defense acquisition policy issues. Serves as a Professor of Software Engineering Management with extensive experience and knowledge in modern software development methods (DevSecOps, Agile) and software product areas (Weapons Systems, AI, Cyber, Defense Business Systems, etc), software assurance and provenance for large and complex military systems. Performs as a \"thinking partner\" and consultant with acquisition customers and students, continuously improving product and service delivery to provide the right knowledge and skills at the point of need through mission assistance, workshops, classroom offerings and on-line resources. Creates content and coordinates with learning asset and technology subject matter experts within the enterprise for development of curriculum, to modify assets and enhance delivery methods as needed. Develops and conducts lectures, cases, simulations, workshops, and field trips. Leads and facilitates student discussion, problem solving, and presentations. Prepares course materials (student and instructor) according to current instructional systems design technology and develops course schedules. Develops and analyzes student assessments, and provides student counseling to ensure the highest degree of learning. Develops or contributes to development of online assets (e.g. courses, podcasts, videos) that customers can leverage in the absence of direct access to DAU faculty. Participates in professional research to ensure curriculum currency and to enhance the skill set and processes in your field of expertise. Performs other duties as assigned."
+                            ],
+                            "Education": "Pay Band A: Minimum Prerequisites You must possess a Bachelor's Degree in a related area from an accredited college or university and have at least 4 years of experience in the appropriate functional area in either government or industry. Alternatively, technical certifications and/or experience may be approved by the President to meet the needs of the University. Pay Band B: Minimum Prerequisites You must possess a Bachelor's Degree in a related area from an accredited college or university and at least 6 years of experience in the appropriate functional area in either a government or industry. Advanced degrees are highly desired. Alternatively, technical certifications and/or experience may be approved by the President to meet the needs of the University. Pay Band C: Minimum Prerequisites You must possess a Bachelor's Degree in a related area from an accredited college or university and at least 8 years of experience in the appropriate functional area in either a government or industry. Advanced degrees are highly desired. Alternatively, technical certifications and/or experience may be approved by the President to meet the needs of the University.",
+                            "Requirements": "",
+                            "Evaluations": "Appropriate experts within the Defense Acquisition University will evaluate applications. Salary determination is based on the requirements of the position as well as the qualifications of the selected applicant as aligned with the evaluation criteria for each Pay Band.",
+                            "HowToApply": "To apply for this position, you must provide a complete Application Package. See required documents below. Click 'Apply Online' to create an account or log in to your existing USAJOBS account.\n1. Follow the prompts to complete the assessment questionnaire and upload required documents.\n2. Please ensure you click the Submit My Answers button to submit your application.\n3. Check application status by logging into your USAJOBS account, clicking Application Status, then More Information for this position. Return to an incomplete application by logging into your USAJOBS account and clicking Update Application in the vacancy announcement. You must re-select your resume and other documents from your USAJOBS account or your application will be incomplete.",
+                            "WhatToExpectNext": "Once the online questionnaire is received you will receive an acknowledgement email that your submission was successful. ALL eligible candidates will be forwarded to DAU for consideration. DAU will have a panel review all applicants and will contact individuals for interviews. We will notify you of the outcome after each of these steps has been completed. After making a tentative job offer, we will conduct a suitability/security background investigation. You will no longer need to call the HR Office to determine your application status. USAJOBS has added an alert setting to their system to drive status updates notification for applicants. You can elect to activate the proactive notification from your USAJOBS profile at any point during the application process to sign-up for automatic alerts when there are status changes for jobs to which you have applied.",
+                            "RequiredDocuments": "You must provide a complete Application Package which includes: R&#233;sum&#233;: The latest resume submitted will be used to determine qualifications. Complete Assessment Questionnaire Other Supporting Documents The following supporting documents are REQUIRED to verify your individual eligibility status. Not all will apply for each applicant. They MUST be received by the closing date of the announcement. SF-50 - (If applicable) Notification of Personnel Action for current or former federal employees- with the exception of current permanent DAU employees, please provide your most recent SF50 or the SF50 reflecting Career/Career-Conditional tenure and the highest grade held on a permanent basis. Performance Appraisal: Current or previous federal employees. Other documents identified in the announcement. If you claim Veteran's Preference You must submit a copy of your DD Form-214, \"Certificate of Release or Discharge from Active Duty\", showing the dates of active duty service, type of discharge and the character of service. Alternatively, If you are a current military member in active duty service and do not have a copy of your DD Form-214, you must submit a written documentation (certification) from your branch of service certifying that you are expected to be discharged or released from active duty under honorable conditions no later than 120 days after the date the certification is submitted with your application for this position. The certification should also include your rank, dates of active duty service and what the condition of discharge is thought to be. If claiming 10-point preference and/or are a 30% or more Disabled Veteran, you must submit both a DD Form-214 or expected discharge documentation as described above AND a copy of a letter from the Department of Veterans Affairs (VA) or your branch of service certifying the presence of service-connected disability and indicating the percentage of disability If you are claiming eligibility based on 10-point derived veterans' preference (i.e. a spouse, widow/widower, or parent of a veteran claiming veterans' preference when the veteran is unable to use it), you must also submit a Standard Form 15 (SF-15) \"Application for 10-Point Veteran's Preference\" and any required documents indicated on the SF-15 to substantiate the claimed preference. Note: It is the applicant's responsibility to verify that information and documents entered or uploaded are received, legible, and accurate.",
+                            "Benefits": "",
+                            "BenefitsUrl": "http://www.usa.gov/Federal-Employees/Benefits.shtml",
+                            "BenefitsDisplayDefaultText": true,
+                            "OtherInformation": "DAU has a comprehensive benefits package that includes retirement, social security, and thrift savings; health, life, and long term care insurance; paid vacation, sick leave, and holidays. DAU employees enjoy flexible work schedules, transit subsidy, and the opportunity to telework. For additional information on specific health benefits, life insurance, retirement, etc. please visit: http://www.opm.gov/insure/health/index.asp.\nFor additional information on the Thrift Savings Plan please visit: http://www.tsp.gov.\nFor additional Veteran's information please visit: http://www.usajobs.gov/ei/VetPreference.asp or http://www.fedshirevets.gov Positions filled will not exceed a GS-14 grade equivalency. Typical courses are 1 to 2 weeks in duration. Instruction is provided in government classroom facilities under the construct of generally seeking to take the instruction to the students. If selected for this position, you are subject to the completion of a satisfactory background investigation. You will be required to become a member of the Acquisition Corps. DoD instruction 5000.58R specifies qualification standards for Corps membership (waiver of some of these standards is possible in the limited circumstances described in the instruction). You will be required to join the DAU Faculty Plan as established by Title 10 of the US Code. This position is in the excepted service (non-career). Candidates currently in the competitive service will be required to sign a statement indicating that they are leaving the competitive services voluntarily to accept an appointment in the excepted service. Initial appointment is made for a period of three years, conditional upon satisfactory completion of a DAU probationary period of two years. Every year, as part of an annual review, consideration is given to extending the appointment; thus service at DAU can be extended indefinitely. If selected for this position, you MUST be able to begin work within 90 days of acceptance Initial Probationary Period: You will be required to serve an initial probationary period of 2 years. Drug Testing: This position may be subject to random drug testing. If you are unable to apply online, view the following link for information regarding Alternate Application.",
+                            "KeyRequirements": [],
+                            "WithinArea": "False",
+                            "CommuteDistance": "0",
+                            "ServiceType": "02",
+                            "AnnouncementClosingType": "01",
+                            "AgencyContactEmail": "dfas.indianapolis-in.zh.mbx.dfasmeritcc@mail.mil",
+                            "AgencyContactPhone": "(317) 212-0454",
+                            "SecurityClearance": "Secret",
+                            "DrugTestRequired": "False",
+                            "AdjudicationType": [],
+                            "TeleworkEligible": true
+                        },
+                        "IsRadialSearch": false
+                    }
+                },
+                "RelevanceRank": 0
+            }]
+        }
+      }
