@@ -56,7 +56,20 @@ describe("User Career Search Page Flows", () => {
       cy.get('.the-details').find('.the-details-card').find('.favorite').find('button').click()
       cy.visit('http://localhost:3000/favorites')
       cy.get('.favorite-container').find('.details').find('.details-card').find('.heading-details').contains('PROFESSOR OF SOFTWARE ENGINEERING MANAGEMENT (DEV/SEC/OPS)')
+    })
 
+    it("Should remove card from favorites on button click", () => {
+      cy.visit('http://localhost:3000/Software%20Engineer/599068800')
+      cy.get('.the-details').find('.the-details-card').find('.favorite').find('button').click()
+      cy.visit('http://localhost:3000/favorites')
+      cy.get('.favorite-container').find('.details').find('.button-container').find('.delete-btn').click()
+      cy.get('.details').should('not.exist')
+
+    })
+
+    it("Should render a 404 page for nonexistant url", () => {
+      cy.visit('http://localhost:3000/xyz')
+      cy.get('.error-404').find('.error-message').contains('404 - Page Not Found')
     })
   })
 })
