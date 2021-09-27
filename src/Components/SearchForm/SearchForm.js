@@ -33,7 +33,7 @@ const SearchForm = ({ fetchPositions }) => {
           </div>
           <div className="arrow-container2">
             <img className="arrow" src={arrow} alt="Arrow"/>
-            <p className="question">Put on any job “hat” for a moment and imagine yourself with a certain job title!</p>
+            <p className="question">Put on any job “hat” for a moment and imagine yourself in that position!</p>
           </div>
         </section>
           <section className="the-search">

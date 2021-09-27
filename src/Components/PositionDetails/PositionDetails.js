@@ -31,12 +31,7 @@ const setPositionDetails = () => {
   }
 }
 
-
-
-
-
 const getMajorDuties = () => {
-  console.log("ARRAY", selectPosition.MatchedObjectDescriptor.UserArea.Details.MajorDuties)
   const theList = selectPosition.MatchedObjectDescriptor.UserArea.Details.MajorDuties.map((duty, index) => <p className="duty"> • {duty} </p>)
 
   return theList;
