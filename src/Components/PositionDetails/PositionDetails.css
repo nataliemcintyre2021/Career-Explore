@@ -1,6 +1,5 @@
 .the-details {
   height: 100%;
-
   background-color: #190183;
   margin: 0;
   padding-top: 25px;
@@ -9,7 +8,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
 .the-details-card {
@@ -44,13 +42,9 @@
   margin-top: 20px;
   margin-left: 20px;
   margin-right: 20px;
-
   color: #190183;
   font-family: 'Roboto', sans-serif;
-
   font-size: 25px;
-
-
 }
 
 .role-question {

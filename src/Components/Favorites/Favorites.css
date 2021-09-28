@@ -1,33 +1,25 @@
 .favorite-container {
   height: 100%;
-
   background-color: #190183;
-
   font-family: 'Roboto', sans-serif;
-
 }
 
 .details {
   height: 100%;
-
   background-color: #190183;
   margin: 0;
-
   padding-top: 50px;
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
 .fav-prompt {
   height: 100vh;
-
   background-color: #190183;
   margin: 0;
-
   padding-top: 20px;
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
