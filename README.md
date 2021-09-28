@@ -20,7 +20,7 @@ USAJobs.gov showcases hundreds and thousands, if not more, government jobs on th
 The specifications for this project can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html)
 
 ## Deploy
-[Use this deploy link!](https://careerexplore-deploy.herokuapp.com/)
+[View deployed application here!](https://careerexplore-deploy.herokuapp.com/)
 
 ## Goals
 * In a solo capacity, build a unique React application with a quick, five-day turnaround time
