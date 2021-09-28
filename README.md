@@ -39,12 +39,7 @@ Upon viewing the details pages and seeing the position's major responsibilities,
 #### Favorites Page
 When a user clicks the "Add to Favorites" button for a particular job posting, the posting is saved to the Favorites page and able to be viewed again upon refresh utilizing local storage. User can then click the "Remove from Favorites" button to remove that item from the Favorites section.
 
-
-
- <td><img src="https://media.giphy.com/media/nqOXIXiozVYZ4tPodZ/giphy.gif?cid=790b7611bc035be24324bec2c9763ec1c2a5a3645c75dfa9&rid=giphy.gif" alt="Demonstation of Local storage"
- width="700" height="auto" /></td>
-</p>
-
+![CareerExplore_gif](https://user-images.githubusercontent.com/78229679/135013870-b11d5660-9a93-4208-af21-4771e59b6f94.gif)
 
 ---
 
