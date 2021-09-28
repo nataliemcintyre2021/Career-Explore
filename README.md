@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+<h1 align="center"> Career Explore: Government Jobs </h1>  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### Turing School of Software & Design Mod 3 Showcase Solo Project
+---
 
-## Available Scripts
+## Table of Contents
+* [Introduction](#introduction)
+* [Deploy](#Deploy)
+* [Features](#features)
+* [Technologies](#technologies)
+* [Authors](#authors)
 
-In the project directory, you can run:
+## Introduction
+The primary goal of this project was to build a unique React application utilizing the technologies learned throughout Module 3, specifically demonstrating mastery in React, React Router, asynchronous JavaScript, end to end testing with Cypress, and more. From generating the initial idea, mapping out user personas to show how this application would target a niche audience, to testing and development, this solo project had a quick five day turnaround time.
 
-### `npm start`
+Career Explore utilizes the USAJobs API that provides data related to all federal government jobs currently posted for job applicants. Career Explore is a multi-page informational jobs application that targets users who have an interest in browsing government jobs by job title, but only want to learn about what someone in that role would do (major duties) for those positions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+USAJobs.gov showcases hundreds and thousands, if not more, government jobs on their job board, and a wealth of detail of each position as required by law. This can be difficult to navigate, especially for a user only looking to browse and gather high-level information about job duties as they are narrowing down options in their government career exploration. Utilizing the USAJobs API on this application allows the exploratory user to quickly skim positions and their respective position duties as they seek to explore career paths that may best fit with their personal and career interests. The user of this app may be asking the question, “What would a day in the life of/job duties be of a government job with “XYZ” position title?”.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The specifications for this project can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html)
 
-### `npm test`
+## Deploy
+[Use this deploy link!](https://careerexplore-deploy.herokuapp.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Goals
+* In a solo capacity, build a unique React application with a quick, five-day turnaround time
+* Use USAJobs API to receive current job postings and data for all federal government jobs
+* Use TDD - Cypress
+* Easy to navigate UI/UX  
 
-### `npm run build`
+---
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Home Page, Details Page
+On load, the user sees prompts and a search bar where they can search for any government job title. Upon search, they can see the top 25 most recently posted government jobs that match what was inputted in the search bar. User can then click on any job posting to be taken to a details page showcasing what the major job duties will be in that role.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Upon viewing the details pages and seeing the position's major responsibilities, position title, and government organization hiring for that position, user will also be able to view the position's application (in linked URL) and be able to favorite the job posting for later view.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Favorites Page
+When a user clicks the "Add to Favorites" button for a particular job posting, the posting is saved to the Favorites page and able to be viewed again upon refresh utilizing local storage. User can then click the "Remove from Favorites" button to remove that item from the Favorites section.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ <td><img src="https://media.giphy.com/media/nqOXIXiozVYZ4tPodZ/giphy.gif?cid=790b7611bc035be24324bec2c9763ec1c2a5a3645c75dfa9&rid=giphy.gif" alt="Demonstation of Local storage"
+ width="700" height="auto" /></td>
+</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+#### Future Additions
+- Add a login page for multiple users to store favorite positions they want to display on login
+- Add more responsive styling
+- Add in additional data to details page for a more robust learning experience for user
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies
+React, React Router, Asynchronous Javascript, Cypress, JSON, HTML5, CSS
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Author
+<table display: inline;>
+     <tr>
+       <td> Natalie McIntyre <a href="https://github.com/nataliemcintyre2021">GH</td>
+    </tr>
+ <td><img src="https://avatars.githubusercontent.com/u/78229679?v=4" alt="Natalie McIntyre GitHub Picture"
+ width="150" height="auto" /></td>
+</table>  
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**************************************************************************
+###### This project was created for [Turing School of Software and Design](https://turing.edu/)
+###### September 27th, 2021
+**[Back to top](#table-of-contents)**
