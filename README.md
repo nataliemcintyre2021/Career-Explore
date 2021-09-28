@@ -4,11 +4,11 @@
 ---
 
 ## Table of Contents
-* [Introduction](#introduction)
-* [Deploy](#Deploy)
+* [Introduction and Goals](#introduction)
+* [Deploy](#deploy)
 * [Features](#features)
 * [Technologies](#technologies)
-* [Authors](#authors)
+* [Author](#author)
 
 ## Introduction
 The primary goal of this project was to build a unique React application utilizing the technologies learned throughout Module 3, specifically demonstrating mastery in React, React Router, asynchronous JavaScript, end to end testing with Cypress, and more. From generating the initial idea, mapping out user personas to show how this application would target a niche audience, to testing and development, this solo project had a quick five day turnaround time.
@@ -17,7 +17,9 @@ Career Explore utilizes the USAJobs API that provides data related to all federa
 
 USAJobs.gov showcases hundreds and thousands, if not more, government jobs on their job board, and a wealth of detail of each position as required by law. This can be difficult to navigate, especially for a user only looking to browse and gather high-level information about job duties as they are narrowing down options in their government career exploration. Utilizing the USAJobs API on this application allows the exploratory user to quickly skim positions and their respective position duties as they seek to explore career paths that may best fit with their personal and career interests. The user of this app may be asking the question, “What would a day in the life of/job duties be of a government job with “XYZ” position title?”.
 
-The specifications for this project can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html)
+The specifications for this project can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html).
+
+---
 
 ## Deploy
 [View deployed application here!](https://careerexplore-deploy.herokuapp.com/)
@@ -39,7 +41,7 @@ Upon viewing the details pages and seeing the position's major responsibilities,
 #### Favorites Page
 When a user clicks the "Add to Favorites" button for a particular job posting, the posting is saved to the Favorites page and able to be viewed again upon refresh utilizing local storage. User can then click the "Remove from Favorites" button to remove that item from the Favorites section.
 
-![CareerExplore_gif](https://user-images.githubusercontent.com/78229679/135013870-b11d5660-9a93-4208-af21-4771e59b6f94.gif)
+![View_Career_Explore](https://user-images.githubusercontent.com/78229679/135014242-6719fead-8367-42e0-9cb4-5d6c5b48dcf9.gif)
 
 ---
 
@@ -47,11 +49,14 @@ When a user clicks the "Add to Favorites" button for a particular job posting, t
 - Add a login page for multiple users to store favorite positions they want to display on login
 - Add more responsive styling
 - Add in additional data to details page for a more robust learning experience for user
+
+
 ---
 
 ## Technologies
 React, React Router, Asynchronous Javascript, Cypress, JSON, HTML5, CSS
 
+--- 
 ## Author
 <table display: inline;>
      <tr>
