@@ -5,7 +5,7 @@
 
 ## Table of Contents
 * [Introduction and Goals](#introduction)
-* [Deploy](#deploy)
+* [Deploy and Set-Up Instructions](#deploy)
 * [Features](#features)
 * [Technologies](#technologies)
 * [Author](#author)
@@ -23,6 +23,16 @@ The specifications for this project can be found [here](https://frontend.turing.
 
 ## Deploy
 [View deployed application here!](https://careerexplore-deploy.herokuapp.com/)
+
+## Set up Instructions
+To run the project locally:
+
+- obtain a personal API key from [USAJobs](https://developer.usajobs.gov/APIRequest/Index)
+- ```git clone``` to this repo
+- ```cd``` into repo
+- run ```npm install```
+- add your keys to a .env file in the root folder of the repo following [these instructions](https://dev.to/ivana_croxcatto/hiding-api-keys-in-your-code-1h0a) and add the .env file to your .gitignore file so that your keys are never made publicly accessible. 
+- run ```npm start``` to run the React App in your browser
 
 ## Goals
 * In a solo capacity, build a unique React application with a quick, five-day turnaround time
