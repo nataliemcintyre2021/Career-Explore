@@ -9,7 +9,7 @@
   background-color: white;
   color: #190284;
   padding: 5%;
-  height: 25vh;
+  height: 30vh;
   width: 20vw;
   font-family: 'Roboto', sans-serif;
 }
@@ -24,4 +24,23 @@
   -webkit-box-shadow: 0px 0px 10px 0px #FFF;
   -moz-box-shadow: 0px 0px 10px 0px #FFF;
   box-shadow: 0px 0px 10px 0px #FFF;
+}
+
+@media screen and (max-width: 428px) {
+  .card {
+    margin: 0;
+    padding: 5%;
+    height: 35vh;
+    width: 45vw;
+  }
+}
+
+/* tablet size */
+@media screen and (min-width: 690px) and (max-width: 1030px) {
+  .card {
+    margin: 0;
+    padding: 5%;
+    height: 20vh;
+    width: 35vw;
+  }
 }

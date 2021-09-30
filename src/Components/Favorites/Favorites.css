@@ -57,3 +57,20 @@
   height: 80%;
   width: 90%;
 }
+
+/* mobile size */
+@media screen and (max-width: 425px) {
+  .fav-prompt {
+    font-size: 15px;
+  }
+  .details-card {
+    width: 80%;
+  }
+}
+
+/* tablet size */
+@media screen and (min-width: 700px) and (max-width: 1030px) {
+  .fav-prompt {
+    font-size: 22px;
+  }
+}

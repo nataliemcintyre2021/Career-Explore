@@ -3,3 +3,18 @@
   color: #190183;
   margin-top: 20%;
 }
+
+@media screen and (max-width: 425px) {
+  .loading {
+    font-size: 4em;
+    margin-top: 60%;
+  }
+}
+
+/* tablet size */
+@media screen and (min-width: 700px) and (max-width: 1030px) {
+  .loading {
+    font-size: 4em;
+    margin-top: 60%;
+  }
+}

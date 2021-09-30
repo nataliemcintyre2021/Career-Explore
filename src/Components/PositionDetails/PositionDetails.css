@@ -84,3 +84,86 @@
   padding: 2px;
   cursor: pointer;
 }
+/* mobile size */
+@media screen and (max-width: 428px) {
+  .the-details {
+    height: 80%;
+  }
+
+  .the-details-card {
+    height: 60%;
+    width: 85%;
+  }
+
+  .heading-details {
+    font-size: 20px;
+  }
+
+  .duties-details {
+    font-size: 18px;
+  }
+
+  .role-question {
+    font-size: 30px;
+  }
+
+  .app-link {
+    margin: 0;
+    padding: 6vw;
+    font-size: 10px;
+  }
+
+  .favorite {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .favorite-button {
+    width: 150px;
+    font-size: 12px;
+  }
+
+}
+
+/* tablet size */
+@media screen and (min-width: 690px) and (max-width: 1030px) {
+  .the-details {
+    height: 80%;
+  }
+
+  .the-details-card {
+    height: 60%;
+    width: 85%;
+    margin: 20vh;
+  }
+
+  .heading-details {
+    font-size: 25px;
+  }
+
+  .duties-details {
+    font-size: 18px;
+  }
+
+  .role-question {
+    font-size: 35px;
+  }
+
+  .app-link {
+    margin: 0;
+    padding: 6vw;
+    font-size: 10px;
+  }
+
+  .favorite {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .favorite-button {
+    width: 150px;
+    font-size: 12px;
+  }
+}

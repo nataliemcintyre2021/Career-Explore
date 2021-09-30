@@ -76,6 +76,36 @@ h1 {
 
 .custom-shape-divider-top-1632345337 .shape-fill {
     fill: #EDDE18;
+}
 
+/* mobile size */
+@media screen and (max-width: 425px) {
+  .career-title {
+    margin-top: 15vh;
+    margin-bottom: 0;
+    font-size: 40px;
+  }
 
+  .government-title {
+    font-size: 20px;
+    margin-top: 1vh;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+  }
+}
+
+/* tablet size */
+@media screen and (min-width: 700px) and (max-width: 1030px) {
+  .career-title {
+    margin-top: 10vh;
+    margin-bottom: 0;
+    font-size: 45px;
+  }
+
+  .government-title {
+    font-size: 22px;
+    margin-top: 1vh;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+  }
 }

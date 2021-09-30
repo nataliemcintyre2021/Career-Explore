@@ -23,17 +23,18 @@ const SearchForm = ({ fetchPositions }) => {
   return (
     <>
     <main className="main-page">
+    <section className="the-prompts">
+      <div className="arrow-container">
+
+        <p className="question">Do you have interest in a US government role?</p>
+      </div>
+      <div className="arrow-container2">
+
+        <p className="question2">Put on any job “hat” for a moment and imagine yourself in that position!</p>
+      </div>
+    </section>
       <form className="form-search">
-        <section className="the-prompts">
-          <div className="arrow-container">
-            <img className="arrow" src={arrow} alt="Arrow"/>
-            <p className="question">Do you have interest in a US government role?</p>
-          </div>
-          <div className="arrow-container2">
-            <img className="arrow" src={arrow} alt="Arrow"/>
-            <p className="question">Put on any job “hat” for a moment and imagine yourself in that position!</p>
-          </div>
-        </section>
+
           <section className="the-search">
             <p className="prompt">Search for any government job title and learn about what they get to do!</p>
             <input
