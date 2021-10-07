@@ -16,10 +16,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "CI=false && react-scripts build",
+    "test": "start-server-and-test start http://localhost:3000 cypress",
     "eject": "react-scripts eject",
-    "cypress": "./node_modules/.bin/cypress open"
+    "cypress": "cypress run"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +40,8 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^8.4.1"
+    "cypress": "^8.4.1",
+    "har-validator": "^5.1.5",
+    "start-server-and-test": "^1.14.0"
   }
 }
