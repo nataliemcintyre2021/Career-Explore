@@ -16,8 +16,8 @@ describe("User Career Explore Page Flows", () => {
     })
 
     it("Should display prompts before search bar area", () => {
-      cy.get('.form-search').find('.the-prompts').find('.arrow-container').find('.question').contains('Do you have interest in a US government role?')
-      cy.get('.form-search').find('.the-prompts').find('.arrow-container2').find('.question').contains('Put on any job “hat” for a moment and imagine yourself in that position!')
+      cy.get('.the-prompts').find('.arrow-container').find('.question').contains('Do you have interest in a US government role?')
+      cy.get('.the-prompts').find('.arrow-container2').find('.question2').contains('Put on any job “hat” for a moment and imagine yourself in that position!')
     })
 
     it("Should display search prompt and search bar with button", () => {
